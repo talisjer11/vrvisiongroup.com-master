@@ -1,0 +1,1157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="VR Vision's Virtual Reality Training ROI Calculator - Learn The ROI Behind VR Training Application Development">
+<meta name="author" content="Artak Martirosyan">
+<link rel="apple-touch-icon" sizes="180x180" href="../vrvisiongroup.com/wp-content/themes/VRV/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../vrvisiongroup.com/wp-content/themes/VRV/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../vrvisiongroup.com/wp-content/themes/VRV/assets/images/favicon/favicon-16x16.png">
+<link rel="canonical" href="index.htm">
+<title>VR Vision - VR Training & Development ROI Calculator</title>
+<script src="../jspdf%402.5.1/dist/jspdf.umd.min.js" type="7c4427a03acf32a9c15b2da1-text/javascript"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style id="" media="all">@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+</style>
+
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+        * {
+            -webkit-font-smoothing: antialiased;
+        }
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        hr {
+            background-color: #17282b;
+            margin-bottom: 15px ;
+            margin-top: 15px;
+            opacity: .08;
+        }
+
+        .form-heading {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        h5 {
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+        .form-bg-dark hr {
+            background-color: #fff;
+            opacity: .2;
+        }
+        .logo_mobile_white {
+            max-width: 60px;
+            height: auto;
+        }
+        #roi_calculator{
+            box-shadow: 0 0 60px rgb(0 0 0 / 12%);
+            padding: 40px 30px;
+            border-radius: 5px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            color: #17282b;
+        }
+        #roi_calculator.form-bg-dark{
+            background-color: #2b8bdc;
+            color: #ffffff;
+            background: url(../wp-content/themes/VRV/assets/images/gradient.jpg) no-repeat center center / cover;
+
+        }
+
+        #calculate_first svg {
+            width: 16px;
+            height: 16px;
+            margin-left: 20px;
+            fill: #ffffff;
+        }
+        .form-bg-dark #calculate_first svg {
+            fill: #17282b;            
+        }
+        .form-group {
+            position: relative;
+        }
+        .form-group.error label, .form-group.vlid label {
+            color: #17282b;
+        }
+        .form-bg-dark .form-group.error label, .form-bg-dark .form-group.vlid label {
+            color: #ffffff;
+        }
+
+        .form-control {
+            background-color: #ffffff;
+            height: 40px;
+            border-radius: 0;
+            border: 0;
+            border-bottom: 2px solid #DEE1E1;
+        }
+
+        .form-control:focus {
+            color: #495057;
+            background-color: #ffffff;
+            border-color: #0075B9;
+            box-shadow: none;
+        }
+
+        .form-control.error {
+            border-color: #ff0000;
+        }
+        .form-control.valid {
+            border-color: #00FE38;
+        }
+        .result-btn .btn{
+            width: 100%;
+            line-height: 26px;
+            padding: 7px 10px;
+            position: relative;
+            border: 0;
+            box-sizing: border-box;
+        }
+        #getpdf {
+            background-color: #3574B6;
+            border: 0;
+            line-height: 26px;
+            padding: 7px 10px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        #getpdf.in .loader.recursive-circle,
+        #getpdf.in .loader.recursive-circle:before{border-color: #ffffff;border-top-color: transparent;}
+        .result-btn .after-result{display: none;}
+
+        .error{
+            color: red;
+        }
+        label.error{
+            display: none !important;
+        }
+        .form-label{text-transform: capitalize;}
+
+        #roi_calculator input[type=text]:disabled {
+          background: #dddddd;
+        }
+
+
+
+        h6 {
+            padding-bottom: 5px;
+        }
+
+
+        .modal-header{
+            background-color: #2b8bdc;
+            color: #ffffff;
+            background: url(../wp-content/themes/VRV/assets/images/gradient.jpg) no-repeat center center / cover;
+        }
+        .modal-header .modal-title{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .modal-body .form-control{
+            margin-bottom: 20px;
+        }
+        .modal-body label{display: none;}
+
+ 
+    
+
+        @keyframes recursive-circle {
+            0% {
+              transform: rotate(0); 
+            }
+            100% {
+              transform: rotate(360deg); 
+            } 
+        }
+
+        .loader-outer {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 9px;
+            right: 10px;
+            margin: 0;
+            visibility: hidden;
+        }
+        .in .loader-outer {
+            visibility: visible;
+        }
+        .loader.recursive-circle {
+            height: 22px;
+            width: 22px;
+            display: block;
+            margin: 0;
+            position: absolute;
+            border: 2px solid #212529;
+            border-radius: 50px;
+            border-top-color: transparent;
+            transform-origin: center center;
+            animation: recursive-circle 600ms linear infinite;
+        }
+  
+        .loader.recursive-circle:before {
+            content: '';
+            box-sizing: border-box;
+            height: 14px;
+            width: 14px;
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            border: 2px solid #212529;
+            border-radius: 50px;
+            border-top-color: transparent;
+            transform-origin: center center;
+            animation: recursive-circle 6s linear infinite;
+        }
+        @media (min-width: 576px){
+            .incident-right {padding-top: 26px;}
+        }
+        @media (min-width: 768px){
+            html, body{font-size: 15px;}
+            .form-heading {font-size: 28px;}
+            h5 {font-size: 16px;}
+            .incident-right {padding-top: 28px;}
+        }
+        @media (min-width: 992px){}
+        @media (min-width: 1200px){
+            html, body{font-size: 16px;}
+            h5 {font-size: 17px;}
+            .form-heading {font-size: 38px;}
+            .incident-right {padding-top: 30px;}
+        }
+    </style>
+<style type="text/css" class="init"></style>
+
+
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+<div class="row justify-content-md-center">
+<div class="col-12 col-md-10 col-lg-8">
+<form id="roi_calculator" novalidate="" class="form-horizontal form-bg-dark" method="post">
+<a href="../index.htm" class="logo mb-4  d-inline-block">
+<img src="../vrvisiongroup.com/wp-content/themes/VRV/assets/images/logo.png" class="logo_white d-none d-md-inline-block" alt="VR Vision Inc">
+<img src="../vrvisiongroup.com/wp-content/themes/VRV/assets/images/logomobile_white.png" class="logo_mobile_white d-md-none" alt="VR Vision Inc">
+</a>
+<h1 class="h1 form-heading">VR Training Application ROI Calculator</h1>
+<p class="form-subheading mb-4" data-toggle="tooltip" data-html="true" data-placement="bottom" data-offset="20" title="<div class='text-left'><p>These include known benefits such as:</p><p>- Improved Training Effectiveness</p><p>- Employee Retention</p><p>- Investor Sentiment</p><p>- Environmental / Sustainability Impact</p></div>">The ROI calculator is created to be a guiding tool in establishing feasability for VR training in a material way.
+Although effective, there are certain aspects that are difficult to quantify in a standardized way.
+</p>
+<p>The numbers provided below are pre-populated as a reference based on industry averages</p>
+<hr>
+<div class="row py-3">
+<div class="col-sm-12">
+<div class="form-group">
+<label for="company_name" class="form-label">Company Name</label>
+<input id="company_name" name="company_name" placeholder="Sample Company" value="" type="text" class="form-control" required="required">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label for="number_of_employees" class="form-label" data-toggle="tooltip" data-placement="top" title="Total employees enrolled in VR training.">
+Number of Employees
+</label>
+<input id="number_of_employees" name="number_of_employees" placeholder="4,000" value="" type="digits" class="form-control" required="required">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group ">
+<label for="pay_per_hour" class="form-label" data-toggle="tooltip" data-placement="top" title="Average pay per hour per employee enrolled in VR training.">
+Avg. Hourly Pay
+</label>
+<input id="pay_per_hour" name="pay_per_hour" placeholder="$25" type="text" value="" class="form-control dolar" required="required">
+</div>
+</div>
+</div>
+<hr>
+<div class="row py-3">
+<div class="col-12">
+<h5><strong>Investment</strong></h5>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-group ">
+<label for="vr_content_development" class="form-label" data-toggle="tooltip" data-placement="top" title="Estimated cost for VR training module $150,000">VR Content Development</label>
+<input id="vr_content_development" name="vr_content_development" placeholder="$150,000" value="" type="text" class="form-control dolar" required="required">
+</div>
+</div>
+ <div class="col-12 col-sm-6">
+<div class="form-group ">
+<label for="implementing_purchasing_vr_training_hardware" class="form-label" data-toggle="tooltip" data-placement="top" title="$1500 per standalone device / $3500 PC powered device">Implementing VR Training Hardware</label>
+<input id="implementing_purchasing_vr_training_hardware" name="implementing_purchasing_vr_training_hardware" placeholder="$50,000" value="" type="text" class="form-control dolar" required="required">
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-group">
+<label for="licencing_maintenance_ongoing_support" class="form-label" data-toggle="tooltip" data-placement="top" title="Estimated ongoing cost is 10-25% of content development">Licencing / Maintenance & Support</label>
+<input id="licencing_maintenance_ongoing_support" name="licencing_maintenance_ongoing_support" placeholder="$30,000" value="" type="text" class="form-control dolar" required="required">
+</div>
+</div>
+<div class="col-12 col-sm-6">
+<div class="form-group">
+<label for="internal_resources_time_and_effort" class="form-label" data-toggle="tooltip" data-placement="top" title="Time and effort by internal employees to deploy VR ($10-25k)">Internal Resources Cost</label>
+<input id="internal_resources_time_and_effort" name="internal_resources_time_and_effort" placeholder="$25,000" value="" type="text" class="form-control dolar" required="required">
+</div>
+</div>
+</div>
+<hr>
+<input type="hidden" id="efficiency_time_cost_savings_hid" name="efficiency_time_cost_savings_hid" value="0">
+<div class="row py-3">
+<div class="col-sm-6">
+<h5><strong>Travel Savings</strong></h5>
+<div class="form-group">
+<label for="trip_reductions" class="form-label" data-toggle="tooltip" data-placement="top" title="Reduction in the number trips *1 per year due to VR eliminating the need travel">
+Trip Reductions
+</label>
+<input id="trip_reductions" name="trip_reductions" placeholder="2" value="" type="text" class="form-control" required="required">
+</div>
+<div class="form-group">
+<label for="cost_per_trip" class="form-label" data-toggle="tooltip" data-placement="top" title="Average cost per trip per employee.">
+Cost Per Trip
+</label>
+<input id="cost_per_trip" name="cost_per_trip" placeholder="$15" value="" type="text" class="form-control dolar" required="required">
+</div>
+<div class="form-group">
+<label for="work_hours_lost" class="form-label " data-toggle="tooltip" data-placement="top" title="Productivity/work hours lost due to travel time per trip*1.">
+Work Hours Lost
+</label>
+<input id="work_hours_lost" name="work_hours_lost" placeholder="16" value="" type="text" class="form-control" required="required">
+</div>
+</div>
+ <div class="col-sm-6">
+<h5><strong>Estimated Savings on Travel</strong></h5>
+<div class="form-group">
+<label for="reduced_travel_cost_savings" class="form-label tooltip1" data-toggle="tooltip" data-placement="top" title="">
+Savings from Elimated Travel Expense
+</label>
+<input id="reduced_travel_cost_savings" name="reduced_travel_cost_savings" placeholder="$100,000" value="" type="text" class="form-control dolar" required="required" disabled="">
+</div>
+<div class="form-group">
+<label for="travel_productivity_gain_savings" class="form-label tooltip1" data-toggle="tooltip" data-placement="top" title="Employee productivity time savings">
+Travel Productivity Gain Savings
+</label>
+<input id="travel_productivity_gain_savings" name="travel_productivity_gain_savings" placeholder="$1,000,000" value="" type="text" class="form-control dolar" required="required" disabled="">
+</div>
+</div>
+</div>
+<hr>
+<div class="row py-3">
+<div class="col-sm-6">
+<h5><strong>Training</strong></h5>
+<div class="form-group">
+<label for="training_duration" class="form-label" data-toggle="tooltip" data-placement="top" title="The number of hours it takes to go through your enterprise training program *2">
+Traditional Training Duration
+</label>
+<input id="training_duration" name="training_duration" placeholder="8" value="" type="text" class="form-control" required="required">
+</div>
+<div class="form-group">
+<label for="training_sessions" class="form-label" data-toggle="tooltip" data-placement="top" title="The number of above training sessions that an employee has to repeat on an annual basis *2">
+Training Sessions
+</label>
+<input id="training_sessions" name="training_sessions" placeholder="2" value="" type="text" class="form-control" required="required">
+</div>
+</div>
+<div class="col-sm-6">
+<h5><strong>Savings on Training</strong></h5>
+<div class="form-group ">
+<label for="productivity_time_cost_savings" class="form-label" data-toggle="tooltip" data-placement="top" title="Cost savings gained by productivity increases from accelerated training times">
+Productivity Time Cost Savings
+</label>
+<input id="productivity_time_cost_savings" name="productivity_time_cost_savings" placeholder="1,040,000" value="" type="text" class="form-control dolar" required="required" disabled="">
+</div>
+<div class="form-group ">
+<label for="efficiency_time_cost_savings" class="form-label" data-toggle="tooltip" data-placement="top" title="Improved efficiency in time to complete VR training vs traditional methods.">
+Efficiency Time Cost Savings
+</label>
+<input id="efficiency_time_cost_savings" name="efficiency_time_cost_savings" placeholder="65%" value="" type="text" class="form-control perc" required="required">
+</div>
+</div>
+</div>
+<hr>
+<div class="row py-3">
+ <div class="col-12">
+<h5><strong>Materials</strong></h5>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label for="equipment_materials" class="form-label" data-toggle="tooltip" data-placement="top" title="Company wide cost incured from damaged equipment & materials used for hands on training over a one year period. *2">
+Equipment & Materials
+</label>
+<input id="equipment_materials" name="equipment_materials" placeholder="$5,000" value="" type="text" class="form-control dolar" required="required">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label for="savings_on_material_usage" class="form-label" data-toggle="tooltip" data-placement="top" title="Elimination of cost from damaged equipment/wear & tear.">Savings on Material Usage</label>
+<input id="savings_on_material_usage" name="savings_on_material_usage" placeholder="$5,000" value="" type="text" class="form-control dolar" required="required" disabled="">
+</div>
+</div>
+</div>
+<hr>
+<div class="row py-3">
+<div class="col-12">
+<h5><strong>Incidents</strong></h5>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label for="incident_cost" class="form-label tooltip1" data-toggle="tooltip" data-placement="top" title="Average cost per incident in training *2">
+Incident cost
+</label>
+<input id="incident_cost" name="incident_cost" placeholder="$10,000" value="" type="text" class="form-control dolar" required="required">
+</div>
+<div class="form-group">
+<label for="incident_frequency" class="form-label tooltip1" data-toggle="tooltip" data-placement="top" title="Number of incidents per year that can be eliminated by incorporating VR training">
+Incident frequency
+</label>
+<input id="incident_frequency" name="incident_frequency" placeholder="2" value="" type="text" class="form-control" required="required">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label for="productivity_loss" class="form-label tooltip1" data-toggle="tooltip" data-placement="top" title="Time in hours lost due to downtime, filing reports & investigations - per incident">
+Productivity Time Lost (hours)
+</label>
+<input id="productivity_loss" name="productivity_loss" placeholder="8" value="" type="text" class="form-control" required="required">
+</div>
+<div class="form-group">
+<label for="savings_from_incident_reductions" class="form-label" data-toggle="tooltip" data-placement="top" title="Cost savings gained by reducing the number of incidents & productivity loss">Savings from Incident Reductions</label>
+<input id="savings_from_incident_reductions" name="savings_from_incident_reductions" placeholder="$20,400" value="" type="text" class="form-control dolar" required="required" disabled="">
+</div>
+
+</div>
+</div>
+<hr>
+<div class="row py-3 result-btn">
+<div class="col-12 col-md-4">
+<div class="form-group">
+<button type="button" id="calculate" class="btn btn-light">Calculate
+<div class="loader-outer"><div class="loader recursive-circle"></div></div>
+</button>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="form-group after-result">
+<button type="button" class="btn btn-light" data-toggle="modal" data-target="#resultModal">Download PDF</button>
+</div>
+</div>
+</div>
+<div id="results-table" style="display:none;">
+<h4 class="mb-3"><strong>Potential Savings from Implementing VR Training</strong></h4>
+<div class="row">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">Year One</div>
+<div class="col">$<span id="year_one">0</span></div>
+</div>
+<hr>
+<div class="row">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">Year Two</div>
+<div class="col">$<span id="year_two">0</span></div>
+</div>
+<hr>
+<div class="row">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">Year Three</div>
+<div class="col">$<span id="year_three">0</span></div>
+</div>
+<hr>
+<div class="row">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2">Year Four</div>
+<div class="col">$<span id="year_four">0</span></div>
+</div>
+<hr>
+</div>
+<div class="row">
+<div class="col-12">
+<p class="small">*1 Travelling both ways</p>
+<p class="small">*2 That will be replaced by the VR simulation</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header px-5 py-4">
+<h3 class="modal-title" id="resultModalLabel">Please enter your details to download report</h3>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body px-5 pt-2 pb-5">
+<form id="roi_calculator_subscribe" novalidate="" class="form-horizontal" method="post">
+<div class="form-group pt-4">
+<label for="email" class="form-label">Email</label>
+<input id="email" name="email" placeholder="Email" type="email" class="form-control" required="required">
+</div>
+<div class="form-group pt-4" class="form-label">
+<label for="first_name">First Name</label>
+<input id="first_name" name="first_name" placeholder="First Name" type="text" class="form-control" required="required">
+</div>
+<div class="form-group pt-4" class="form-label">
+<label for="last_name">Last Name</label>
+<input id="last_name" name="last_name" placeholder="Last Name" type="text" class="form-control" required="required">
+</div>
+<br>
+<div class="row form-group mb-0">
+<div class="col-md-12">
+<button name="submit" type="submit" class="btn btn-primary py-2 get-pdf" id="getpdf" disabled="">Submit <div class="loader-outer"><div class="loader recursive-circle"></div></div></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script type="7c4427a03acf32a9c15b2da1-text/javascript" language="javascript" src="assets/js/jquery-3.3.1.js"></script>
+<script type="7c4427a03acf32a9c15b2da1-text/javascript" language="javascript" src="assets/js/jquery.validate.min.js"></script>
+
+
+<script type="7c4427a03acf32a9c15b2da1-text/javascript" id="hs-script-loader" async="" defer="" src="../2641011.js"></script>
+
+
+<script type="7c4427a03acf32a9c15b2da1-text/javascript" language="javascript" src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="7c4427a03acf32a9c15b2da1-text/javascript">
+        window.jsPDF = window.jspdf.jsPDF;
+        
+
+/*
+        function getPDF(){
+            if( !$("#roi_calculator").valid() || !$("#roi_calculator_subscribe").valid() ){
+                var firstError = $(".form-control.error")[0]
+                $('html, body').animate({scrollTop: $(firstError).offset().top}, 1000);
+                return false;
+            }
+            $('#getpdf').addClass('in');
+
+
+            var company_name = $('#company_name').val();   
+            var number_of_employees = $('#number_of_employees').val();
+            var pay_per_hour = $('#pay_per_hour').val();
+
+            //Investment
+            var vr_content_development = $('#vr_content_development').val();
+            var implementing_purchasing_vr_training_hardware = $('#implementing_purchasing_vr_training_hardware').val();
+            var licencing_maintenance_ongoing_support = $('#licencing_maintenance_ongoing_support').val();
+            var internal_resources_time_and_effort = $('#internal_resources_time_and_effort').val();
+
+            //Travel
+            var trip_reductions = $('#trip_reductions').val(); 
+            var cost_per_trip = $('#cost_per_trip').val();
+            var work_hours_lost = $('#work_hours_lost').val();
+                
+            //Savings on Travel
+            var reduced_travel_cost_savings = $('#reduced_travel_cost_savings').val();
+            var travel_productivity_gain_savings = $('#travel_productivity_gain_savings').val();
+
+            //Training
+            var training_duration = $('#training_duration').val();
+            var training_sessions = $('#training_sessions').val();
+
+            //Savings on Training
+            var productivity_time_cost_savings = $('#productivity_time_cost_savings').val();
+            var efficiency_time_cost_savings = $('#efficiency_time_cost_savings').val();
+
+            //Materials
+            var equipment_materials = $('#equipment_materials').val();
+
+            //Savings on Material Usage
+            var savings_on_material_usage = $('#savings_on_material_usage').val();
+
+            //Incidents
+            var incident_cost = $('#incident_cost').val();
+            var incident_frequency = $('#incident_frequency').val();
+            var productivity_loss = $('#productivity_loss').val();
+
+            //Savings from Incident Reductions
+            var savings_from_incident_reductions = $('#savings_from_incident_reductions').val();
+
+
+            //Result
+            var year_one = '$' + $('#year_one').text();
+            var year_two = '$' + $('#year_two').text();
+            var year_three = '$' + $('#year_three').text();
+            var year_four = '$' + $('#year_four').text();
+
+            var doc = new jsPDF();
+            doc.setProperties({
+                title: 'ROI Report - ' + company_name,
+                subject: 'ROI Report',
+                //author: 'James Hall',
+                keywords: 'ROI Report',
+                //creator: 'MEEE'
+            });
+            
+            var positionY = 0;
+            var textLeftKey = 10;
+            var textLeftVal = 80;
+            var textRightKey = 110;
+            var textRightVal = 180;
+            
+            var colorLight = '#777777';
+            var colorDark = '#000000';
+            // Header start 
+            doc.addImage("https://i1.wp.com/vrvisiongroup.com/wp-content/themes/VRV/assets/images/logosticky.png", "PNG", 10, 5, 27.7, 9.9);
+
+            doc.setFontSize(10);
+            doc.text("ROI Report", 200, 11.2, null, null, "right");
+            
+            doc.line(10, 20, 200, 20);
+            
+            // Content Start
+            doc.setDrawColor('#dddddd');
+            doc.text("Company Name:", 10, positionY+=35);
+            doc.text(company_name, 50, positionY);
+            
+            doc.text("Number of Employees:", 10, positionY+=7);
+            doc.text(number_of_employees, 50, positionY);
+            
+            doc.text("Avg. Hourly Pay:", 10, positionY+=7);
+            doc.text(pay_per_hour, 50, positionY);
+            
+            doc.setTextColor(colorLight);
+            doc.text("INVESTMENT", 10, positionY+=10);
+            doc.line(10, positionY+=5, 200, positionY);
+            
+            doc.text("VR content development:", textLeftKey, positionY+=7);
+            doc.text(vr_content_development, textLeftVal, positionY);
+            doc.text("Implementing VR Training Hardware:", textRightKey, positionY);
+            doc.text(implementing_purchasing_vr_training_hardware, textRightVal, positionY);
+            doc.text("Licencing / Maintenance & Support:", textLeftKey, positionY+=7);
+            doc.text(licencing_maintenance_ongoing_support, textLeftVal, positionY);
+            doc.text("Internal Resources Cost:", textRightKey, positionY);
+            doc.text(internal_resources_time_and_effort, textRightVal, positionY);
+            
+            
+            doc.text("TRAVEL SAVINGS", 10, positionY+=15);
+            doc.line(10, positionY+=5, 200, positionY);
+            
+            doc.text("Trip Reductions:", textLeftKey, positionY+=7);
+            doc.text(trip_reductions, textLeftVal, positionY);
+            doc.text("Savings from Elimated Travel Expense:", textRightKey, positionY);
+            doc.text(reduced_travel_cost_savings, textRightVal, positionY);
+            doc.text("Cost Per Trip:", textLeftKey, positionY+=7);
+            doc.text(cost_per_trip, textLeftVal, positionY);
+            doc.text("Travel Productivity Gain Savings:", textRightKey, positionY);
+            doc.text(travel_productivity_gain_savings, textRightVal, positionY);
+            doc.text("Work Hours Lost:", textLeftKey, positionY+=7);
+            doc.text(work_hours_lost, textLeftVal, positionY);
+            
+            
+            doc.text("TRAINING", 10, positionY+=15);
+            doc.line(10, positionY+=5, 200, positionY);
+            
+            doc.text("Traditional Training Duration:", textLeftKey, positionY+=7);
+            doc.text(training_duration, textLeftVal, positionY);
+            doc.text("Productivity Time Cost Savings:", textRightKey, positionY);
+            doc.text(productivity_time_cost_savings, textRightVal, positionY);
+            doc.text("Training Sessions:", textLeftKey, positionY+=7);
+            doc.text(training_sessions, textLeftVal, positionY);
+            doc.text("Efficiency Time Cost Savings:", textRightKey, positionY);
+            doc.text(efficiency_time_cost_savings, textRightVal, positionY);
+            
+            doc.text("MATERIALS", 10, positionY+=15);
+            doc.line(10, positionY+=5, 200, positionY);
+            
+            doc.text("Equipment & Materials:", textLeftKey, positionY+=7);
+            doc.text(equipment_materials, textLeftVal, positionY);
+            doc.text("Savings on Material Usage:", textRightKey, positionY);
+            doc.text(savings_on_material_usage, textRightVal, positionY);
+            
+            
+            doc.text("INCIDENTS", 10, positionY+=15);
+            doc.line(10, positionY+=5, 200, positionY);
+            
+
+            doc.text("Incident cost:", textLeftKey, positionY+=7);
+            doc.text(incident_cost, textLeftVal, positionY);
+            doc.text("Productivity loss:", textRightKey, positionY);
+            doc.text(productivity_loss, textRightVal, positionY);
+            doc.text("Incident frequency:", textLeftKey, positionY+=7);
+            doc.text(incident_frequency, textLeftVal, positionY);
+            doc.text("Savings from Incident Reductions:", textRightKey, positionY);
+            doc.text(savings_from_incident_reductions, textRightVal, positionY);
+            
+            
+            doc.setFont('helvetica', 'inherit', 700);
+            //doc.setFontType('bold');
+            doc.text("RESULT", 10, positionY+=15);
+            doc.line(10, positionY+=5, 200, positionY);
+            
+            doc.setFont('helvetica', 'inherit', 400);
+            doc.text("Year One:", 10, positionY+=7);
+            doc.text(year_one, 40, positionY);
+            
+            doc.text("Year Two:", 10, positionY+=7);
+            doc.text(year_two, 40, positionY);
+            
+            doc.text("Year Three:", 10, positionY+=7);
+            doc.text(year_three, 40, positionY);
+            
+            doc.text("Year Four:", 10, positionY+=7);
+            doc.text(year_four, 40, positionY);
+
+            
+
+            setTimeout(function(){
+                $('#getpdf').removeClass('in');
+                doc.save('ROI_report.pdf');
+                $('#resultModal').modal('hide');
+            },1500);
+        }
+        */
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        var formValidate = $( "#roi_calculator" ).validate({
+            rules: {
+                number_of_employees: {required: true, digits: true},    
+                email: {required: true, email: true},
+                first_name: {required: true},
+                last_name: {required: true},
+            }
+        });
+        function numberWithCommas(x){
+            x = x.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return  x;//.match(/^\d+\.?\d{0,2}/);   
+        }
+
+
+
+        $( document ).ready(function() {
+
+            $('#roi_calculator_subscribe').validate({
+                rules: { 
+                    email: {required: true, email: true},
+                    first_name: {required: true},
+                    last_name: {required: true},
+                },
+                success: function(){
+
+                    if($('#roi_calculator_subscribe .form-control.valid').length >= 2 ){
+                        $('#getpdf').prop('disabled', false);
+                    }else{
+                        $('#getpdf').prop('disabled', true);
+                    }
+                }
+            });
+
+            $("#roi_calculator").submit(function(){
+                return false;
+            });
+            $("#roi_calculator_subscribe").submit(function(event){
+                //return false;
+                event.preventDefault();
+                if( !$("#roi_calculator").valid() || !$("#roi_calculator_subscribe").valid() ){
+                    var firstError = $(".form-control.error")[0]
+                    $('html, body').animate({scrollTop: $(firstError).offset().top}, 1000);
+                    return false;
+                }
+                $('#getpdf').addClass('in');
+
+
+                var company_name = $('#company_name').val();   
+                var number_of_employees = $('#number_of_employees').val();
+                var pay_per_hour = $('#pay_per_hour').val();
+
+                //Investment
+                var vr_content_development = $('#vr_content_development').val();
+                var implementing_purchasing_vr_training_hardware = $('#implementing_purchasing_vr_training_hardware').val();
+                var licencing_maintenance_ongoing_support = $('#licencing_maintenance_ongoing_support').val();
+                var internal_resources_time_and_effort = $('#internal_resources_time_and_effort').val();
+
+                //Travel
+                var trip_reductions = $('#trip_reductions').val(); 
+                var cost_per_trip = $('#cost_per_trip').val();
+                var work_hours_lost = $('#work_hours_lost').val();
+                    
+                //Savings on Travel
+                var reduced_travel_cost_savings = $('#reduced_travel_cost_savings').val();
+                var travel_productivity_gain_savings = $('#travel_productivity_gain_savings').val();
+
+                //Training
+                var training_duration = $('#training_duration').val();
+                var training_sessions = $('#training_sessions').val();
+
+                //Savings on Training
+                var productivity_time_cost_savings = $('#productivity_time_cost_savings').val();
+                var efficiency_time_cost_savings = $('#efficiency_time_cost_savings').val();
+
+                //Materials
+                var equipment_materials = $('#equipment_materials').val();
+
+                //Savings on Material Usage
+                var savings_on_material_usage = $('#savings_on_material_usage').val();
+
+                //Incidents
+                var incident_cost = $('#incident_cost').val();
+                var incident_frequency = $('#incident_frequency').val();
+                var productivity_loss = $('#productivity_loss').val();
+
+                //Savings from Incident Reductions
+                var savings_from_incident_reductions = $('#savings_from_incident_reductions').val();
+
+
+                //Result
+                var year_one = '$' + $('#year_one').text();
+                var year_two = '$' + $('#year_two').text();
+                var year_three = '$' + $('#year_three').text();
+                var year_four = '$' + $('#year_four').text();
+
+                var doc = new jsPDF();
+                doc.setProperties({
+                    title: 'VR Vision ROI Calculator Results',
+                    subject: 'VR Vision ROI Calculator Results',
+                    //author: 'James Hall',
+                    keywords: 'VR Vision ROI Calculator Results',
+                    //creator: 'MEEE'
+                });
+                
+                var positionY = 0;
+                var textLeftKey = 10;
+                var textLeftVal = 80;
+                var textRightKey = 110;
+                var textRightVal = 180;
+                
+                var colorLight = '#777777';
+                var colorDark = '#000000';
+                // Header start 
+                doc.addImage("https://i1.wp.com/vrvisiongroup.com/wp-content/themes/VRV/assets/images/logosticky.png", "PNG", 10, 5, 27.7, 9.9);
+
+                doc.setFontSize(10);
+                doc.text("ROI Report", 200, 11.2, null, null, "right");
+                
+                doc.line(10, 20, 200, 20);
+                
+                // Content Start
+                doc.setDrawColor('#dddddd');
+                doc.text("Company Name:", 10, positionY+=35);
+                doc.text(company_name, 50, positionY);
+                
+                doc.text("Number of Employees:", 10, positionY+=7);
+                doc.text(number_of_employees, 50, positionY);
+                
+                doc.text("Avg. Hourly Pay:", 10, positionY+=7);
+                doc.text(pay_per_hour, 50, positionY);
+                
+                doc.setTextColor(colorLight);
+                doc.text("INVESTMENT", 10, positionY+=10);
+                doc.line(10, positionY+=5, 200, positionY);
+                
+                doc.text("VR content development:", textLeftKey, positionY+=7);
+                doc.text(vr_content_development, textLeftVal, positionY);
+                doc.text("Implementing VR Training Hardware:", textRightKey, positionY);
+                doc.text(implementing_purchasing_vr_training_hardware, textRightVal, positionY);
+                doc.text("Licencing / Maintenance & Support:", textLeftKey, positionY+=7);
+                doc.text(licencing_maintenance_ongoing_support, textLeftVal, positionY);
+                doc.text("Internal Resources Cost:", textRightKey, positionY);
+                doc.text(internal_resources_time_and_effort, textRightVal, positionY);
+                
+                
+                doc.text("TRAVEL SAVINGS", 10, positionY+=15);
+                doc.line(10, positionY+=5, 200, positionY);
+                
+                doc.text("Trip Reductions:", textLeftKey, positionY+=7);
+                doc.text(trip_reductions, textLeftVal, positionY);
+                doc.text("Savings from Elimated Travel Expense:", textRightKey, positionY);
+                doc.text(reduced_travel_cost_savings, textRightVal, positionY);
+                doc.text("Cost Per Trip:", textLeftKey, positionY+=7);
+                doc.text(cost_per_trip, textLeftVal, positionY);
+                doc.text("Travel Productivity Gain Savings:", textRightKey, positionY);
+                doc.text(travel_productivity_gain_savings, textRightVal, positionY);
+                doc.text("Work Hours Lost:", textLeftKey, positionY+=7);
+                doc.text(work_hours_lost, textLeftVal, positionY);
+                
+                
+                doc.text("TRAINING", 10, positionY+=15);
+                doc.line(10, positionY+=5, 200, positionY);
+                
+                doc.text("Traditional Training Duration:", textLeftKey, positionY+=7);
+                doc.text(training_duration, textLeftVal, positionY);
+                doc.text("Productivity Time Cost Savings:", textRightKey, positionY);
+                doc.text(productivity_time_cost_savings, textRightVal, positionY);
+                doc.text("Training Sessions:", textLeftKey, positionY+=7);
+                doc.text(training_sessions, textLeftVal, positionY);
+                doc.text("Efficiency Time Cost Savings:", textRightKey, positionY);
+                doc.text(efficiency_time_cost_savings, textRightVal, positionY);
+                
+                doc.text("MATERIALS", 10, positionY+=15);
+                doc.line(10, positionY+=5, 200, positionY);
+                
+                doc.text("Equipment & Materials:", textLeftKey, positionY+=7);
+                doc.text(equipment_materials, textLeftVal, positionY);
+                doc.text("Savings on Material Usage:", textRightKey, positionY);
+                doc.text(savings_on_material_usage, textRightVal, positionY);
+                
+                
+                doc.text("INCIDENTS", 10, positionY+=15);
+                doc.line(10, positionY+=5, 200, positionY);
+                
+
+                doc.text("Incident cost:", textLeftKey, positionY+=7);
+                doc.text(incident_cost, textLeftVal, positionY);
+                doc.text("Productivity loss:", textRightKey, positionY);
+                doc.text(productivity_loss, textRightVal, positionY);
+                doc.text("Incident frequency:", textLeftKey, positionY+=7);
+                doc.text(incident_frequency, textLeftVal, positionY);
+                doc.text("Savings from Incident Reductions:", textRightKey, positionY);
+                doc.text(savings_from_incident_reductions, textRightVal, positionY);
+                
+                
+                doc.setFont('helvetica', 'inherit', 700);
+                //doc.setFontType('bold');
+                doc.text("RESULT", 10, positionY+=15);
+                doc.line(10, positionY+=5, 200, positionY);
+                
+                doc.setFont('helvetica', 'inherit', 400);
+                doc.text("Year One:", 10, positionY+=7);
+                doc.text(year_one, 40, positionY);
+                
+                doc.text("Year Two:", 10, positionY+=7);
+                doc.text(year_two, 40, positionY);
+                
+                doc.text("Year Three:", 10, positionY+=7);
+                doc.text(year_three, 40, positionY);
+                
+                doc.text("Year Four:", 10, positionY+=7);
+                doc.text(year_four, 40, positionY);
+
+                
+
+                setTimeout(function(){
+                    $('#getpdf').removeClass('in');
+                    doc.save('VR-Vision-ROI-Calculator-Results.pdf');
+                    $('#resultModal').modal('hide');
+                },1500);
+            });
+
+            
+            $('.dolar').blur(function() {
+                var curr_with_text = $(this).val();
+                var curr_num = curr_with_text.replace(/[^0-9\.]/g, '');
+                var curr = '$'+curr_with_text.replace(/[^0-9\[.]/g, '');
+                //var curr = curr_with_text.replace(',', '');
+
+                if (!!curr_num){
+                    $(this).val(numberWithCommas(curr));
+                }else{
+                    $(this).val('');
+                }
+                formValidate.element($(this));
+            });
+            
+            
+            $('.perc').blur(function() {
+                var curr_with_text = $(this).val();
+                var curr_num = curr_with_text.replace(/[^0-9\.]/g, '');
+                var curr = curr_with_text.replace(/[^0-9\[.]/g, '')+'%';
+                //var curr = curr_with_text.replace(',', '');
+                $(this).val(numberWithCommas(curr));
+
+                if (!!curr_num){
+                    $(this).val(numberWithCommas(curr));
+                }else{
+                    $(this).val('');
+                }
+                formValidate.element($(this));
+            });
+
+
+           
+        });
+
+        $('#roi_calculator_subscribe').change(function(e){
+            var input = $(e.target);
+            var form_group = input.parents('.form-group');
+            if( formValidate.element(input) ) {
+                form_group.removeClass('error').addClass('valid');
+            }else{
+                form_group.removeClass('valid').addClass('error');
+            }
+        });
+        
+
+        $('#roi_calculator').change(function(e){
+            var input = $(e.target);
+            var form_group = input.parents('.form-group');
+            if( formValidate.element(input) ) {
+                form_group.removeClass('error').addClass('valid');
+            }else{
+                form_group.removeClass('valid').addClass('error');
+            }
+            var number_of_employees = $('#number_of_employees').val().replace(/[^0-9\.]/g, '');
+            var trip_reductions = $('#trip_reductions').val().replace(/[^0-9\.]/g, ''); 
+            var cost_per_trip = $('#cost_per_trip').val().replace(/[^0-9\.]/g, '');
+            var work_hours_lost = $('#work_hours_lost').val().replace(/[^0-9\.]/g, '');
+            var pay_per_hour = $('#pay_per_hour').val().replace(/[^0-9\.]/g, '');
+            var training_duration = $('#training_duration').val().replace(/[^0-9\.]/g, '');
+            var training_sessions = $('#training_sessions').val().replace(/[^0-9\.]/g, '');
+            var efficiency_time_cost_savings = $('#efficiency_time_cost_savings').val().replace(/[^0-9\.]/g, '');
+            var incident_cost = $('#incident_cost').val().replace(/[^0-9\.]/g, '');
+            var incident_frequency = $('#incident_frequency').val().replace(/[^0-9\.]/g, '');
+            var productivity_loss = $('#productivity_loss').val().replace(/[^0-9\.]/g, '');
+
+            if(incident_cost && incident_frequency && productivity_loss && incident_frequency && pay_per_hour){
+               var savings_from_incident_reductions_val = (incident_cost*incident_frequency)*1+(productivity_loss*incident_frequency*pay_per_hour)*1;
+               $('#savings_from_incident_reductions').val(savings_from_incident_reductions_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));  
+            }
+
+            if(training_duration && training_sessions && pay_per_hour && number_of_employees && efficiency_time_cost_savings){
+                var productivity_time_cost_savings_val = training_duration*training_sessions*pay_per_hour*number_of_employees*efficiency_time_cost_savings/100;
+                $('#productivity_time_cost_savings').val(productivity_time_cost_savings_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            }
+            if(number_of_employees && trip_reductions && cost_per_trip){
+                var reduced_travel_cost_savings_val = number_of_employees * trip_reductions * cost_per_trip;
+                $('#reduced_travel_cost_savings').val(reduced_travel_cost_savings_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            }
+            if(work_hours_lost && trip_reductions && pay_per_hour && number_of_employees){
+                var travel_productivity_gain_savings_val = work_hours_lost*trip_reductions*pay_per_hour*number_of_employees;
+                $('#travel_productivity_gain_savings').val(travel_productivity_gain_savings_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            }
+
+        });
+        function calculations(){
+            
+            var company_name = $('#company_name').val();   
+            var number_of_employees = $('#number_of_employees').val().replace(/[^0-9\.]/g, '')*1;
+            var pay_per_hour = $('#pay_per_hour').val().replace(/[^0-9\.]/g, '')*1;
+
+            //Investment
+            var vr_content_development = $('#vr_content_development').val().replace(/[^0-9\.]/g, '')*1;
+            var implementing_purchasing_vr_training_hardware = $('#implementing_purchasing_vr_training_hardware').val().replace(/[^0-9\.]/g, '')*1;
+            var licencing_maintenance_ongoing_support = $('#licencing_maintenance_ongoing_support').val().replace(/[^0-9\.]/g, '')*1;
+            var internal_resources_time_and_effort = $('#internal_resources_time_and_effort').val().replace(/[^0-9\.]/g, '')*1;
+
+            //Travel
+            var trip_reductions = $('#trip_reductions').val().replace(/[^0-9\.]/g, '')*1; 
+            var cost_per_trip = $('#cost_per_trip').val().replace(/[^0-9\.]/g, '')*1;
+            var work_hours_lost = $('#work_hours_lost').val().replace(/[^0-9\.]/g, '')*1;
+                
+            //Savings on Travel
+            var reduced_travel_cost_savings = $('#reduced_travel_cost_savings').val().replace(/[^0-9\.]/g, '');
+            var travel_productivity_gain_savings = $('#travel_productivity_gain_savings').val().replace(/[^0-9\.]/g, '');
+
+            //Training
+            var training_duration = $('#training_duration').val().replace(/[^0-9\.]/g, '')*1;
+            var training_sessions = $('#training_sessions').val().replace(/[^0-9\.]/g, '')*1;
+
+            //Savings on Training
+            var productivity_time_cost_savings = $('#productivity_time_cost_savings').val().replace(/[^0-9\.]/g, '')*1;
+            var efficiency_time_cost_savings = $('#efficiency_time_cost_savings').val().replace(/[^0-9\.]/g, '')*1;
+
+            //Materials
+            var equipment_materials = $('#equipment_materials').val().replace(/[^0-9\.]/g, '');
+
+            //Savings on Material Usage
+            var savings_on_material_usage = $('#savings_on_material_usage').val().replace(/[^0-9\.]/g, '');
+
+            //Incidents
+            var incident_cost = $('#incident_cost').val().replace(/[^0-9\.]/g, '');
+            var incident_frequency = $('#incident_frequency').val().replace(/[^0-9\.]/g, '');
+            var productivity_loss = $('#productivity_loss').val().replace(/[^0-9\.]/g, '');
+
+            //Savings from Incident Reductions
+            var savings_from_incident_reductions = $('#savings_from_incident_reductions').val().replace(/[^0-9\.]/g, '');
+                
+            ///CALCULATIONS///
+            
+           var cost_year_1_val = vr_content_development*1+implementing_purchasing_vr_training_hardware*1+licencing_maintenance_ongoing_support*1+internal_resources_time_and_effort*1; 
+           var cost_year_2_val = licencing_maintenance_ongoing_support*1; 
+           var cost_year_3_val = licencing_maintenance_ongoing_support*1;
+           var cost_year_4_val = licencing_maintenance_ongoing_support*1+implementing_purchasing_vr_training_hardware*1; 
+              
+           var reduced_travel_cost_savings_val = trip_reductions*cost_per_trip*number_of_employees;
+           var travel_productivity_gain_savings_val = work_hours_lost*trip_reductions*pay_per_hour*number_of_employees;
+           var productivity_time_cost_savings_val = training_duration*training_sessions*pay_per_hour*number_of_employees*efficiency_time_cost_savings/100;
+           var savings_from_incident_reductions_val = incident_cost*incident_frequency+productivity_loss*incident_frequency*pay_per_hour;
+           
+           var savings_year_1_5_val = reduced_travel_cost_savings_val*1+travel_productivity_gain_savings_val*1+productivity_time_cost_savings_val*1+equipment_materials*1+savings_from_incident_reductions_val*1;
+           
+           $('#reduced_travel_cost_savings').val(reduced_travel_cost_savings_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           $('#travel_productivity_gain_savings').val(travel_productivity_gain_savings_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           $('#productivity_time_cost_savings').val(productivity_time_cost_savings_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           $('#savings_on_material_usage').val(equipment_materials.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           $('#savings_from_incident_reductions').val(savings_from_incident_reductions_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")); 
+           
+           $('#savings_year_1_5').html(savings_year_1_5_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
+           var year_one_val = savings_year_1_5_val-cost_year_1_val;
+           var year_two_val = savings_year_1_5_val-cost_year_2_val;
+           var year_three_val = savings_year_1_5_val-cost_year_3_val;
+           var year_four_val = savings_year_1_5_val-cost_year_4_val;
+
+           $('#year_one').html(year_one_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           $('#year_two').html(year_two_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           $('#year_three').html(year_three_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           $('#year_four').html(year_four_val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+           
+        }
+
+
+        function calculate(){
+            
+            if(!$("#roi_calculator").valid()){
+                var firstError = $(".form-control.error")[0]
+                $('html, body').animate({scrollTop: $(firstError).offset().top}, 1000);
+
+                return false;
+            }else{
+                var form=$("#roi_calculator").serialize();
+                $.ajax({
+                    type: 'post',
+                    url: 'ajax.php',
+                    data: form,
+                    beforeSend: function(){
+                        $('#calculate').addClass('in');
+                        //$("#my_loader").css("display", "block");
+                    },
+                    success: function (dat) {
+                        setTimeout(function(){
+                            calculations();
+                            $('#calculate').removeClass('in');
+                            $('.after-result').removeClass('after-result');
+                            $("#results-table").show();
+                            $('html, body').animate({scrollTop: $("#results-table").offset().top}, 1000);
+                            $('#resultModal').modal('hide');
+                        },1000);
+                    }
+                });
+            }
+        }
+
+        $('#calculate').click(calculate);
+        //$('#getpdf').click(getPDF);
+    </script>
+<script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="7c4427a03acf32a9c15b2da1-|49" defer=""></script></body>
+</html>

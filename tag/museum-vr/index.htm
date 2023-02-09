@@ -1,0 +1,1890 @@
+﻿<!doctype html>
+<html lang="en-US">
+<head><meta charset="utf-8"><script type="fed6c22ccde05c079e51fcc9-text/javascript">if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script type="fed6c22ccde05c079e51fcc9-text/javascript">class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+<link rel="preload" as="image" href="../../wp-content/uploads/2019/04/ar-museum.jpg"> 
+<script type="rocketlazyloadscript" async="" src="../../gtag/js?id=G-9KKFJE83BN"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9KKFJE83BN');
+</script>
+
+<script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K3Q7WHS');</script>
+
+<link rel="canonical" href="index.htm">
+<title>museum vr Archives - VR Vision Group</title><link rel="preload" as="style" href="../../css2?family=Inter:wght@300;400;500;600;700&display=swap"><script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><style id="" media="print" onload="this.media='all'">@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuOKfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYMZg.ttf) format('truetype');
+}
+</style><noscript><link rel="stylesheet" href="../../css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript><style id="rocket-critical-css">:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar}@-ms-viewport{width:device-width}header,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h1,h4,h5,h6{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}strong{font-weight:bolder}a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}img{vertical-align:middle;border-style:none}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button,input,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}textarea{overflow:auto;resize:vertical}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h1,h4,h5,h6{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}h1{font-size:2.5rem}h4{font-size:1.5rem}h5{font-size:1.25rem}h6{font-size:1rem}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0}.clearfix::after{display:block;clear:both;content:""}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}header,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h1,h4,h5,h6{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}strong{font-weight:bolder}a{color:#007bff;text-decoration:none;background-color:transparent}img{vertical-align:middle;border-style:none}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button,input,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button,select{text-transform:none}select{word-wrap:normal}[type=button],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}textarea{overflow:auto;resize:vertical}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h1,h4,h5,h6{margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:2.5rem}h4{font-size:1.5rem}h5{font-size:1.25rem}h6{font-size:1rem}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.modal{position:fixed;top:0;left:0;z-index:1050;display:none;width:100%;height:100%;overflow:hidden;outline:0}.clearfix::after{display:block;clear:both;content:""}ul{box-sizing:border-box}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.modal{display:none;vertical-align:middle;position:relative;z-index:2;max-width:500px;box-sizing:border-box;width:90%;background:#fff;padding:15px 30px;-webkit-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;-ms-border-radius:8px;border-radius:8px;-webkit-box-shadow:0 0 10px #000;-moz-box-shadow:0 0 10px #000;-o-box-shadow:0 0 10px #000;-ms-box-shadow:0 0 10px #000;box-shadow:0 0 10px #000;text-align:left}*{box-sizing:border-box;margin:0;padding:0}.cta.open{width:auto;position:relative}.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}.bounceIn{-webkit-animation-name:bounceIn;animation-name:bounceIn}p{margin:0px;padding:0px}.mfp-hide{display:none!important}button.mfp-close{overflow:visible;background:transparent;border:0;-webkit-appearance:none;display:block;outline:none;padding:0;z-index:1046;box-shadow:none;touch-action:manipulation}button::-moz-focus-inner{padding:0;border:0}.mfp-close{width:44px;height:44px;line-height:44px;position:absolute;right:0;top:0;text-decoration:none;text-align:center;opacity:0.65;padding:0 0 18px 10px;color:#FFF;font-style:normal;font-size:28px;font-family:Arial,Baskerville,monospace}@font-face{font-display:swap;font-family:'FontAwesome';src:url(../../wp-content/themes/VRV/assets/fonts/fontawesome-webfont.eot);src:url(../../wp-content/themes/VRV/assets/fonts/fontawesome-webfont-1.eot) format('embedded-opentype'),url(../../wp-content/themes/VRV/assets/fonts/fontawesome-webfont.woff2) format('woff2'),url(../../wp-content/themes/VRV/assets/fonts/fontawesome-webfont.woff) format('woff'),url(../../wp-content/themes/VRV/assets/fonts/fontawesome-webfont.ttf) format('truetype'),url(../../wp-content/themes/VRV/assets/fonts/fontawesome-webfont.svg) format('svg');font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-map-marker:before{content:"\f041"}.fa-twitter:before{content:"\f099"}.fa-facebook:before{content:"\f09a"}.fa-linkedin:before{content:"\f0e1"}.fa-youtube-play:before{content:"\f16a"}.fa-instagram:before{content:"\f16d"}.fa-volume-control-phone:before{content:"\f2a0"}.menu_trigger{box-sizing:border-box;width:30px;height:22px;position:relative;margin:0;display:none;float:right;z-index:50}.menu_trigger .slicknav_icon{width:30px;height:22px;margin:auto;-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);top:0;bottom:0;right:0;position:absolute}.menu_trigger .slicknav_icon span{height:3px;width:100%;background:#ffffff;border-radius:4px;opacity:1;-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);display:block;position:absolute}.menu_trigger .slicknav_icon span:nth-child(1){top:0;-webkit-transform-origin:left center;-moz-transform-origin:left center;-o-transform-origin:left center}.menu_trigger .slicknav_icon span:nth-child(2){top:7px;-webkit-transform-origin:left center;-ms-transform-origin:left center;transform-origin:left center}.menu_trigger .slicknav_icon span:nth-child(3){top:14px;-webkit-transform-origin:left center;-moz-transform-origin:left center;-o-transform-origin:left center}#mm_menu{margin:10px auto 0}ul.menu{padding:0 0px 0 0}ul.menu>li{display:inline-block;margin:0 18px}ul.menu>li:last-of-type{margin:0 0px 0 22px}ul.menu li a{font-size:16px;line-height:24px;color:#ffffff;font-family:'Inter';font-weight:bold;text-transform:uppercase;display:block;padding:7px 0}#menu-helper{display:none}.slicknav_icon,.slicknav_icon span{display:block;position:absolute;right:0;align-self:flex-end}.slicknav_icon{width:32px;height:32px;margin:auto;-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0);top:0;bottom:0;right:0}.slicknav_icon span{height:4px;width:100%;background:#ffffff;opacity:1;-webkit-transform:rotate(0);-moz-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}.slicknav_icon span:nth-child(1),.slicknav_icon span:nth-child(2){-webkit-transform-origin:left center;-moz-transform-origin:left center;-o-transform-origin:left center}.slicknav_icon span:nth-child(1){top:5px;transform-origin:left center}.slicknav_icon span:nth-child(2){top:15px;transform-origin:left center}.slicknav_icon span:nth-child(3){top:25px;-webkit-transform-origin:left center;-moz-transform-origin:left center;-o-transform-origin:left center;transform-origin:left center}ul.menu li{position:relative;text-align:left}ul.menu ul{background:rgba(255,255,255,1);padding:0;position:absolute;display:none;top:100%;left:-115px;z-index:399;margin-top:0px;border:1px solid #0f57b0;width:auto}ul.menu ul li{padding:0px;margin:0;display:inline-block;vertical-align:top;width:290px;min-height:72px;box-sizing:border-box}ul.menu ul li a{padding:0;display:block;color:#a5b0b0;line-height:100%}ul.menu ul li a{text-transform:capitalize;font-size:16px}ul.menu li.cta{background:#1b74bb;box-shadow:none;margin:-19px 0 0;display:none;padding:0}ul.menu li.cta a{color:#fff;padding:21px 45px 16px;display:block}html{-webkit-text-size-adjust:100%;-moz-text-size-adjust:none;-ms-text-size-adjust:100%;}body{position:relative;margin:0;padding:20px;background:#ffffff;font-size:18px;line-height:28px;color:#42454a;font-family:'Inter',Arial,Gotham,'Helvetica Neue',Helvetica,sans-serif}img{border:none;max-width:100%}a{text-decoration:none;color:#1b75bc}strong{font-family:'Inter';font-weight:bold;font-style:normal}p{padding-bottom:28px}ul{list-style:none;margin:0 0 0px;padding:0 0 0 26px}h1,h4,h5,h6,p{margin:0;font-weight:normal}.clearfix:before,.clearfix:after{display:table;content:" "}.clearfix:after{clear:both}select{-webkit-appearance:none;-moz-appearance:none;appearance:none}input{-webkit-appearance:none;-moz-appearance:none;appearance:none}input::-webkit-input-placeholder{opacity:1!important;color:#17282b}input:-moz-placeholder{opacity:1!important;color:#17282b}input::-moz-placeholder{opacity:1!important;color:#17282b}input:-ms-input-placeholder{opacity:1!important;color:#17282b}textarea::-webkit-input-placeholder{opacity:1!important;color:#17282b}textarea:-moz-placeholder{opacity:1!important;color:#17282b}textarea::-moz-placeholder{opacity:1!important;color:#17282b}textarea:-ms-input-placeholder{opacity:1!important;color:#17282b}#email_check{display:none}.container{margin:0 auto;overflow:hidden;max-width:2540px}.content{max-width:1180px;box-sizing:border-box;margin:0 auto;padding-left:20px;padding-right:20px}.top{background-size:cover!important;background-color:#1684d8;position:relative;z-index:50;background-position:50%,171%!important}header{top:0;left:0;position:absolute;z-index:150;padding:20px 40px 20px;box-sizing:border-box;width:100%}.working{width:calc(100% - 157px);text-align:right;float:right;padding:0px 0 0;margin:0 -10px 0 0;z-index:50;position:relative}.logo{float:left;z-index:50;position:relative}.logo img{display:block}.cta,input.cta{text-align:center;display:inline-block;vertical-align:top;border-radius:5px;background-color:#ffffff;text-transform:uppercase;color:#17282b;font-weight:normal;padding:25px 50px 20px;font-family:'Inter';font-weight:600;font-size:20px;line-height:100%;text-decoration:none}.hero-ctas .cta{-webkit-box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);-moz-box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1)}input.cta{background-color:transparent;-webkit-box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);-moz-box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,1);color:#fff;padding:25px 45px 20px}h1{font-size:46px;line-height:56px;text-transform:uppercase;padding:0px 0 20px;position:relative;font-family:'Inter';font-weight:bold}#internal h1{text-transform:uppercase;font-size:46px;line-height:56px;font-family:'Inter';font-weight:bold;padding:0px 0 10px;color:#17282b}h4{font-size:32px;line-height:42px;color:#17282b;letter-spacing:0px;padding:0 0 20px;font-family:'Inter';font-weight:bold}h6{font-size:20px;line-height:32px;color:#fff;padding-bottom:30px}.content{padding:90px 20px}.b-inner{padding:200px 20px 200px;max-width:1180px}.banner h6{color:#fff;font-size:20px;padding-bottom:35px}.hero-ctas{text-align:left;font-size:0}.hero-ctas .cta{display:inline-block;vertical-align:top}.half{float:left;width:50%;box-sizing:border-box}.input-field{box-sizing:border-box;position:relative;margin-bottom:10px;padding:10px 15px;position:relative;background:#ffffff;-webkit-box-shadow:0px 2px 0px 0px rgba(0,0,0,0.75);-moz-box-shadow:0px 2px 0px 0px rgba(0,0,0,0.75);box-shadow:0px 2px 0px 0px rgba(0,0,0,0.75)}.input-field:after{content:'';border-top:none rgb(0,0,0);border-left:none rgb(0,0,0);border-right:none rgb(0,0,0);border-bottom:2px solid rgb(0,0,0);position:absolute;bottom:0;left:0;width:100%;height:2px;bottom:-2px;box-sizing:content-box;margin:0px;position:absolute;width:100%;transform:scaleX(0)}input,textarea{display:block;border:none;background:none;width:100%;padding:5px 0px 0px 0px;box-sizing:border-box;font-size:16px;color:#17282b;font-family:'Inter';font-weight:300}textarea{resize:none;height:70px;overflow:auto}input[type="submit"]{width:auto}.input-field label{display:block;font-size:14px;line-height:18px;color:#17282b;font-family:'Inter';font-weight:bold;text-transform:uppercase}.solutions .content{max-width:1180px}.misfit{width:43%;padding:50px 80px 30px 60px}.half.gradient{border-radius:5px;background:url(../../wp-content/themes/VRV/assets/images/gradient.jpg) no-repeat center center / cover;background-color:#2b8bdc}.a-slide p{color:#42454a;font-family:'Inter';font-style:italic;font-size:16px;line-height:26px;text-align:center}ul.social li{display:inline-block;vertical-align:top;padding:0 3px}ul.social li a{font-size:12px;line-height:20px;display:block;width:18px;height:18px;background:#ffffff;border-radius:50%;color:#2e333a;text-align:center}ul.social li i{position:static}header{background:rgba(255,255,255,0)}header .logo_sticky{display:none}ul.menu li{position:relative}#internal .top{height:auto!important;padding-top:95px}#internal .banner{background-size:cover}#internal .banner{color:#fff}#internal .b-inner{margin:0 auto;height:300px;padding:30px 20px;box-sizing:border-box;max-width:1180px}.contact-halfs{margin-top:0px}.contact-halfs .half{padding:40px 30px}.contact-halfs .half:first-of-type{box-shadow:0 0 60px rgba(0,0,0,.12);background:#fff}.contact-halfs .half.misfit{width:50%}.contact-halfs .half.gradient{border-radius:0}.contact-halfs .half.gradient h5{color:#ffffff}.contact-halfs h5,.white-wrapper h5{color:#17282b;font-size:16px;padding:0 0 15px;text-transform:uppercase;font-family:'Inter';font-weight:bold}.white-wrapper .half.misfit{padding:30px 20px 40px 20px}.contact-form .input-field{padding:10px 15px;box-shadow:0px 2px 0px 0px rgba(222,225,225,1)}.contact-form input.cta{position:relative;background:#1b75bc;color:#fff;text-align:left;font-size:18px;padding:18px 110px 15px 20px;margin-top:30px;background-image:url(../../wp-content/themes/VRV/assets/images/iconsend.png);background-repeat:no-repeat;background-position:right center;background-size:47px auto;box-shadow:none}.contact-halfs ul.info{padding:0;margin-bottom:25px}.contact-halfs ul.info li{font-size:16px;line-height:30px;padding-bottom:5px;border-bottom:1px solid #84c0e5;margin-bottom:7px;padding:17px 0 17px 30px;position:relative;color:#ffffff}.contact-halfs ul li:after{display:none}.contact-halfs ul.info li a{color:#ffffff}.contact-halfs ul.info li:first-of-type{padding-top:0}.contact-halfs ul.info li:first-of-type strong{width:auto;display:block}.contact-halfs ul.info li i{position:absolute;left:0;top:20px;font-size:20px}.contact-halfs ul.info li:first-of-type i{font-size:20px;top:2px}.contact-halfs ul.info li strong{text-transform:uppercase;display:block;font-size:14px;color:#ffffff;font-family:"Inter";font-weight:bold;position:relative}.contact-halfs ul.social li a{color:#3c84db}.banner .book-floater h6{padding-bottom:25px}.book-floater{position:absolute;right:0;bottom:-92px;border-radius:5px;background:#1b75bc;padding:30px;max-width:292px;box-sizing:border-box;text-align:center}.no-padding{padding-top:0}section{position:relative;z-index:10;background-repeat:no-repeat;background-position:center;background-size:cover;background-color:transparent}.content ul li:after{content:'\f00c';position:absolute;left:-24px;top:3px;line-height:100%;font-family:'FontAwesome'}.content ul li{position:relative;color:#42454a;font-size:16px;line-height:26px;padding:0 0 14px}#internal header{background:rgba(255,255,255,1);-webkit-box-shadow:0px 0px 36px 0px rgba(0,0,0,0.3);-moz-box-shadow:0px 0px 36px 0px rgba(0,0,0,0.3);box-shadow:0px 0px 36px 0px rgba(0,0,0,0.3)}#internal header ul.menu li a{color:#17282b}#internal header .logo_sticky{display:block}#internal header .logo_white{display:none}#internal header ul.menu li.cta{display:none}#internal header ul.menu li.cta a{color:#fff}#internal .b-inner{position:relative}.point{position:absolute;top:50%;left:0;height:1px}ul.menu ul li a{padding:28px 0;color:#17282b}ul.menu ul li{-webkit-box-shadow:inset -1px -1px 0px 0px rgba(244,244,244,1);-moz-box-shadow:inset -1px -1px 0px 0px rgba(244,244,244,1);box-shadow:inset -1px -1px 0px 0px rgba(244,244,244,1)}ul.menu ul{font-size:0}ul.menu ul:before{position:absolute;background:url(../../wp-content/themes/VRV/assets/images/menuitems/arrow.png) no-repeat left top;width:24px;height:12px;content:'';top:-10px;left:130px}.white-wrapper{background:#fff;max-width:960px;margin:0 auto;padding:0px;box-sizing:border-box;border-radius:5px;position:relative}.contact-halfs ul.social{display:flex;justify-content:space-between;padding:0}button.mfp-close{color:#fff!important;text-transform:uppercase;font-size:16px;font-family:'Inter';font-weight:bold;top:-50px;z-index:150;width:100px}.contact-halfs .half:first-of-type{-webkit-border-top-left-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-bottomleft:5px;border-top-left-radius:5px;border-bottom-left-radius:5px}.contact-halfs .half:last-of-type{-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-radius-topright:5px;-moz-border-radius-bottomright:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}h5{font-family:'Inter';font-weight:bold;font-size:20px}#internal header .menu_trigger .slicknav_icon span{background:#1b75bc}header .logo_mobile,header .logo_mobile_white{display:none}#load{position:fixed;z-index:9999;width:100%;height:100%;top:0;left:0;color:#fff;background:linear-gradient(-45deg,#d4dee2,#1b75bc,#ffffff,#6d6e71);background-size:400% 400%;-webkit-animation:Gradient 15s ease infinite;-moz-animation:Gradient 15s ease infinite;animation:Gradient 15s ease infinite;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}@-webkit-keyframes Gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}@-moz-keyframes Gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}@keyframes Gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}#internal #load{display:none}.articles-wrapper{border-top:1px solid #a3a3a3;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.a-image{width:100%;height:250px;margin-bottom:20px;background-color:#e0e0e0;background-position:center;background-repeat:no-repeat;background-size:cover}.a-image a{height:100%;width:100%;display:block;background:rgba(0,0,0,0)}.content ul.tags{padding:0;margin:0}.content ul.tags li{float:left;text-transform:uppercase;font-family:'Inter';font-weight:bold;padding:0;line-height:18px}.content ul.tags li a{color:#858585;font-size:12px;padding:0 13px}.content ul.tags li:first-of-type a{padding:0 13px 0 0}.content ul.tags li:first-of-type:after{display:none}.content ul.tags li:after{content:'\f111';font-size:5px;color:#858585;left:-1px;top:7px}.article{width:29%;padding:0 6.5% 0 0;margin-top:60px}.content{padding:80px 20px}.b-inner{padding:200px 20px 120px}@media screen and (max-width:1440px){#internal .banner{height:300px}.b-inner{padding:160px 20px 120px}}@media screen and (max-width:1280px){.banner h6{max-width:450px}header{padding:20px}.book-floater{right:20px}}@media screen and (max-width:1180px){#internal .banner{height:auto;background-size:cover}.book-floater{position:static;right:auto;bottom:auto;float:right}}@media screen and (max-width:1100px){header ul.menu li.cta,#internal header ul.menu li.cta{display:none}}@media screen and (max-width:1024px){ul.menu ul li{display:block}ul.menu ul{width:290px}#internal .working{margin:0 -10px 0 0}.half img{max-width:100%}}@media screen and (max-width:960px){ul.menu>li{display:inline-block;margin:0 12px}#internal .working{margin:0px -10px 0 0}.white-wrapper .half.misfit{float:left}.half.misfit{float:none;width:100%}}@media screen and (max-width:860px){.article{padding:0 0 0 5%;width:45%;margin-top:40px}.article:nth-of-type(odd){padding:0 5% 0 0}}@media (max-width:768px){#internal .top{padding-top:0px}#internal .b-inner{height:110px}header .logo_sticky,#internal header .logo_sticky{display:none}header .logo_white{display:none}header .logo_mobile{display:block;width:56px}header{padding:7px 20px;position:static}.white-wrapper .contact-halfs .half{border-radius:0!important}#internal .working{margin:0px 0px 0 0}nav:not(.mm-menu){display:none}.menu_trigger{display:block;margin:20px 0 0 0;color:#fff}ul.menu li{display:block}.sub-menu{background:none;padding:0;border-bottom:0px;min-width:0;position:static;display:block!important;top:auto;left:auto;z-index:inherit;margin-top:auto}#menu-helper{display:block}br{display:none}.half{float:none!important;width:100%!important}h1{font-size:32px;line-height:44px}.content{padding:40px 20px}.half.misfit{padding:50px 20px 30px 20px}.book-floater{display:none;margin:80px auto -125px}.half img{float:none!important;margin:0 auto 0px;display:block}body{padding:0px 0 0}h6{font-size:16px;line-height:26px}#internal h1{font-size:30px;line-height:40px}}@media screen and (max-width:550px){.article{padding:0 0 0 0%;width:100%;margin-top:30px}.article:nth-of-type(odd){padding:0 0% 0 0}.hero-ctas .cta,.cta{display:block;padding:25px 15px 20px}.a-image{width:100%;height:200px}}.cta.open{background:#414a59;box-shadow:none;color:#fff;border:1px solid #353e4b;padding:1em;min-width:190px}@media screen and (max-width:480px){.half.misfit{padding:30px 20px 0 20px}.contact-form input.cta{width:100%;display:block;padding:18px 20px 15px 20px}.cta.open{min-width:auto;margin-bottom:17px}}ul.menu li.menu-item-3570{background:url(../../wp-content/themes/VRV/assets/images/menuitems/job.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}ul.menu li.menu-item-8237{background:url(../../wp-content/themes/VRV/assets/images/menuitems/newsroom.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}@media (max-width:599px){.top{background-position:34%,171%!important}}@media (max-width:1199px){#internal .b-inner{width:960PX}}@media (max-width:991px){#internal .b-inner{width:720PX!important}.half img{float:none!important;margin:0!important;display:inline-block}}@media (max-width:767px){#internal .b-inner{width:100%!important}}@media (max-width:601px){#internal .b-inner{width:540PX!important}}@media (max-width:599px){#internal .b-inner{width:480PX!important}}@media (max-width:480px){#internal .b-inner{width:100%!important;padding:0 15px}#internal h1{font-size:22px}h4{font-size:22px}}ul.menu ul{width:290px}ul.menu li.web-mobile-apps-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/web-mobile-apps.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}ul.menu li.augmented-reality-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/augmented-reality.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}ul.menu li.virtual-reality-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/virtual-reality.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}ul.menu li.training-menu{background:url(../../wp-content/uploads/2019/01/training.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}ul.menu li.use-cases-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/use-cases.png) no-repeat 20px center;background-size:32px auto;padding-left:70px}ul.menu li.blog-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/blog.png) no-repeat 20px center;background-size:32px auto;padding-left:70px}ul.menu li.roi-calculator-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/roi-calculator.png) no-repeat 20px center;background-size:32px auto;padding-left:70px}ul.menu li.whitepapers-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/whitepaper.png) no-repeat 20px center;background-size:32px auto;padding-left:70px}.cta.open{background:#fff;color:#414a59;border:none}.top{background-size:cover!important}@media (max-width:991px){.content ul li{position:relative;color:#42454a;font-size:16px;line-height:46px;padding:0 0 0 74px;min-height:44px;margin:15px 0;width:auto}}@media (max-width:767px){#internal h1{font-size:30px!important}#internal h4{font-size:22px}#internal .b-inner{width:100% important;padding:0 15px}.half ul{padding:0;margin:0}}#load{position:fixed;z-index:9999;width:100%;display:none!important;height:100%;top:0;left:0;color:#fff;background:linear-gradient(-45deg,#d4dee2,#1b75bc,#ffffff,#6d6e71);background-size:400% 400%;-webkit-animation:Gradient 15s ease infinite;-moz-animation:Gradient 15s ease infinite;animation:Gradient 15s ease infinite;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.social{margin-top:2px}.hero-ctas{text-align:center!important}ul.menu li.video-production-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/menuitem3.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}ul.menu li.menu-item-7379{background:url(../../wp-content/themes/VRV/assets/images/menuitems/about.png) no-repeat 20px center;background-size:33px auto;padding-left:70px}ul.menu li.vision-portal-menu{background:url(../../wp-content/themes/VRV/assets/images/menuitems/vision-portal.png) no-repeat 20px center;background-size:32px auto;padding-left:70px}html{background:#dbdcdd}body{padding:0!important;margin:20px!important}ul.menu ul{background:rgba(255,255,255,1);padding:0;position:absolute;display:none;top:100%;left:50%;z-index:399;margin-top:0px;border:1px solid #0f57b0;width:auto;transform:translateX(-50%)}.working ul li a{position:relative;padding:7px 0}</style>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link rel="apple-touch-icon" sizes="180x180" href="../../wp-content/themes/VRV/assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/VRV/assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/VRV/assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="../../wp-content/themes/VRV/assets/images/favicon/manifest.json">
+<link rel="mask-icon" href="../../wp-content/themes/VRV/assets/images/favicon/safari-pinned-tab.svg" color="#ff7903">
+<meta name="theme-color" content="#ffffff">
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel="preload" type="text/css" href="../../wp-content/cache/min/1/wp-content/themes/VRV/assets/slick/slick.css?ver=1674141571" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')">
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link href="../../wp-content/themes/VRV/assets/bootstrap/css/bootstrap.min.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" rel="preload">
+
+
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" language="javascript" src="../../wp-content/themes/VRV/assets/bootstrap/js/bootstrap.bundle.min.js" defer=""></script>
+<meta name='robots' content='noindex, follow'>
+
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="museum vr Archives - VR Vision Group">
+<meta property="og:url" content="https://vrvisiongroup.com/tag/museum-vr/">
+<meta property="og:site_name" content="VR Vision Group">
+<meta property="og:image" content="https://vrvisiongroup.com/wp-content/uploads/2018/02/vr-vision-icon.png">
+<meta property="og:image:width" content="118">
+<meta property="og:image:height" content="118">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vrvisioninc">
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://vrvisiongroup.com/tag/museum-vr/","url":"https://vrvisiongroup.com/tag/museum-vr/","name":"museum vr Archives - VR Vision Group","isPartOf":{"@id":"https://vrvisiongroup.com/#website"},"primaryImageOfPage":{"@id":"https://vrvisiongroup.com/tag/museum-vr/#primaryimage"},"image":{"@id":"https://vrvisiongroup.com/tag/museum-vr/#primaryimage"},"thumbnailUrl":"https://vrvisiongroup.com/wp-content/uploads/2019/04/ar-museum.jpg","breadcrumb":{"@id":"https://vrvisiongroup.com/tag/museum-vr/#breadcrumb"},"inLanguage":"en-US"},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://vrvisiongroup.com/tag/museum-vr/#primaryimage","url":"https://vrvisiongroup.com/wp-content/uploads/2019/04/ar-museum.jpg","contentUrl":"https://vrvisiongroup.com/wp-content/uploads/2019/04/ar-museum.jpg","width":1150,"height":767,"caption":"ar-museum"},{"@type":"BreadcrumbList","@id":"https://vrvisiongroup.com/tag/museum-vr/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://vrvisiongroup.com/"},{"@type":"ListItem","position":2,"name":"museum vr"}]},{"@type":"WebSite","@id":"https://vrvisiongroup.com/#website","url":"https://vrvisiongroup.com/","name":"VR Vision Group","description":"Bringing The Power of Virtual Reality to Business","publisher":{"@id":"https://vrvisiongroup.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://vrvisiongroup.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://vrvisiongroup.com/#organization","name":"VR Vision","url":"https://vrvisiongroup.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://vrvisiongroup.com/#/schema/logo/image/","url":"https://vrvisiongroup.com/wp-content/uploads/2018/02/vr-vision-icon.png","contentUrl":"https://vrvisiongroup.com/wp-content/uploads/2018/02/vr-vision-icon.png","width":118,"height":118,"caption":"VR Vision"},"image":{"@id":"https://vrvisiongroup.com/#/schema/logo/image/"},"sameAs":["https://www.instagram.com/vrvisioninc/","https://www.linkedin.com/company/vr-vision-inc","https://www.pinterest.ca/vrvisioninc/","https://www.youtube.com/channel/UCc9hEJyEemiJe9DIOjBquhw","https://www.facebook.com/vrvisioninc/","https://twitter.com/vrvisioninc"]}]}</script>
+
+<link rel='dns-prefetch' href='//js.hs-scripts.com'>
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com'>
+<link href='https://fonts.gstatic.com' crossorigin="" rel='preconnect'>
+<link rel="alternate" type="application/rss+xml" title="VR Vision Group &raquo; museum vr Tag Feed" href="feed/index.htm">
+
+<script type="rocketlazyloadscript" src="../../gtag/js-1?id=UA-84821103-2" data-cfasync="false" data-wpfc-render="false" data-rocket-type="text/javascript" async=""></script>
+<script type="rocketlazyloadscript" data-cfasync="false" data-wpfc-render="false" data-rocket-type="text/javascript">
+				var mi_version = '8.12.1';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-9KKFJE83BN',
+															'ga-disable-UA-84821103-2',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+														parameters.send_to = monsterinsights_frontend.ua;
+							__gtagDataLayer(type, name, parameters);
+													} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+										__gtagTracker('config', 'G-9KKFJE83BN', {"forceSSL":"true","link_attribution":"true"} );
+															__gtagTracker('config', 'UA-84821103-2', {"forceSSL":"true","link_attribution":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link rel='preload' href='../../wp-content/plugins/vr_roi_calculator/assets/bootstrap/css/bootstrap.min-321.css?ver=1674989985' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link rel='preload' href='../../wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link rel='preload' href='../../wp-includes/css/classic-themes.min.css?ver=1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1674141571' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link rel='preload' href='../../wp-content/plugins/custom-twitter-feeds/css/ctf-styles.min.css?ver=2.0.3' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<style id='dominant-color-styles-inline-css' type='text/css'>
+img[data-dominant-color]:not(.has-transparency) { background-color: var(--dominant-color); }
+</style>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link rel='preload' href='../../wp-content/plugins/wpcf7-redirect/build/css/wpcf7-redirect-frontend.min.css?ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=1674141571' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css?ver=1674141571' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/themes/VRV/style.css?ver=1674141572' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/themes/VRV/custom-style.css?ver=1674141572' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/plugins/beaf-before-and-after-gallery/assets/css/twentytwenty.css?ver=1674141572' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/plugins/beaf-before-and-after-gallery/assets/css/bafg-style.css?ver=1674141572' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link rel='preload' href='../../index-1.htm?display_custom_css=css&#038;ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(../../wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/vr_roi_calculator/assets/js/jquery.js?ver=1674141572' id='jquery-file-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/plugins/vr_roi_calculator/assets/bootstrap/js/bootstrap.bundle.min-321.js?ver=1674989985' id='bootstrap-file-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.12.1' id='monsterinsights-frontend-script-js' defer=""></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/vrvisiongroup.com","hash_tracking":"false","ua":"UA-84821103-2","v4_id":"G-9KKFJE83BN"};/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/beaf-before-and-after-gallery/assets/js/jquery.event.move.js?ver=1674141572' id='eventMove-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/beaf-before-and-after-gallery/assets/js/jquery.twentytwenty.js?ver=1674141572' id='bafg_twentytwenty-js' defer=""></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.htm"><link rel="alternate" type="application/json" href="../../wp-json/wp/v2/tags/200"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+
+<style type="text/css">
+            a.ctf-author-name img {
+    display: none !important;
+}
+        </style>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel="preload" type="text/css" href="../../wp-content/cache/min/1/ajax/libs/izimodal/1.5.1/css/iziModal.min.css?ver=1674141572" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"> 
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" class="hsq-set-content-id" data-content-id="listing-page">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "listing-page"]);
+			</script>
+
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+pp_oppp=false;
+pb_options={"fullscreen":true,"fade":true,"animate":true,"shadow":true,"width":"640px","height":"480px","style":{"box":"pb-light","overlay":"pb-light-overlay"},"galleries":false,"resize":1};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="../../wp-content/cache/min/1/wp-content/plugins/panopress/js/panopress.js?ver=1674141572" defer=""></script>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel="preload" type="text/css" media="all" href="../../wp-content/cache/min/1/wp-content/plugins/panopress/css/panopress.css?ver=1674141572" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')">
+
+<meta name="generator" content="Performance Lab 1.9.0; modules: images/dominant-color, images/webp-support, images/webp-uploads">
+
+
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"tag-post"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script type="rocketlazyloadscript" data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKXCCKV');
+</script>
+
+
+<style type="text/css"></style>
+<style>
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style> <style type="text/css" id="wp-custom-css">
+			/* Image with 'data' attribute is hidden */
+img[data-lazy-src] {
+/* we set the opacity to 0 */
+   opacity: 0;
+}
+#form_id h5 {
+    margin-top: 10px;
+}
+.error{
+    color: red;
+}
+
+.fade {
+    opacity: 1.6;
+}
+
+.fade:not(.show) {
+    opacity: 1.6;
+}
+
+.modal {
+    top: 10%;
+    }
+    
+.modal.fade .modal-dialog {
+    transform: translate(0,0%);
+    transition: transform .3s ease-out;
+}
+
+#agreemant{
+z-index: 99999;
+}
+
+.lb{
+    font-size: 10px;
+}
+
+.modal-backdrop {
+z-index: 9;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.wrap-detail-page form label {
+    margin-top: 0px;
+}
+
+.form-group {
+    margin-bottom: 0rem;
+}
+
+hr {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+/**/
+
+/* Tooltip container */
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip1 .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #888;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip1:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+#form_id{
+    background-color: #2276b9;
+    color: #fff;
+}
+
+#form_id input {
+    background-color: #ffffff;
+    border: 1px solid #f2f5fa;
+    padding: 10px !important;
+    border-radius: 2px !important;
+    height: 40px !important;
+    margin-bottom: 2px;
+}
+
+#form_id input[type=text]:disabled {
+  background: #dddddd;
+}
+hr {
+    background-color: #fff;
+    margin-bottom: 0px !important;
+    margin-top: 5px !important;
+}
+#form_id h1 {
+    color: #fff;
+	text-align: center;
+}
+#form_id h2 {
+    color: #fff;
+}
+.padsmall p {
+    padding-bottom: 0;
+}
+h6 {
+    padding-bottom: 5px;
+}
+
+.padsmall p{
+   /* margin: 0 0 -25px;*/
+}
+/* Image without 'data' attribute is (or becomes) visible */
+img.lazyloaded {
+/* prepare the future animation */
+   -webkit-transition: opacity .5s linear 0.2s;
+       -moz-transition: opacity .5s linear 0.2s;
+                 transition: opacity .5s linear 0.2s;
+/* we set the opacity to 1 to do the magic */
+   opacity: 1;
+}
+.half.left.newimg img {
+    float: left;
+	margin-top:10px;
+}
+.post_big img {
+    width: auto !important;
+}
+.content_blog .image-container {
+    text-align: center;
+}
+
+body .brands-and-testimonials, body.home div.brands {
+ 
+    background-size: cover !important;
+	background-repeat:no-repeat !important;
+
+    }
+body .brands-and-testimonials {
+	background-image:none !important;
+	background:none !important;
+}
+
+body.home div.brands {
+	background:url(../../wp-content/uploads/2018/10/brands-wrapper-bg-2560x1100.jpg);
+}
+
+.learn-more-btn {color:white;}
+
+    .testimonials .a-slide {
+    
+    padding: 50px 0px 60px !important;
+    
+    }
+
+/*-----26_oct_18----*/
+.testimonials .a-slide {
+    padding: 50px 70px 60px !important;
+}
+
+/*-----25_oct_18----*/
+.testmonials_1 .slick-list.draggable {
+height: auto !important;
+}
+
+.author1 {
+background-color: #fff;
+}
+
+.author1 iframe{
+width: 85%;
+margin: 0 auto;
+display: block;
+padding: 48px 0;
+overflow: visible;
+}
+
+.footer-grey-wrap .links {
+    display: inline-block;
+    vertical-align: top;
+    width: 89%;
+}
+
+/*---29_oct_18-start------*/
+.postid-3695 .case-images .content.clearfix {
+    padding: 0 !important;
+}
+/*---29_oct_18-end------*/
+
+/*---31_oct_18-start------*/
+.page-id-13 section.solutions.showcase .p-s3-box .p-s3-box-txt img {
+    display: none;
+}
+
+.page-id-13 section.solutions.showcase .p-s3-box .p-s3-box-txt p {
+    margin-top:18px;
+}
+/*---31_oct_18-end------*/
+
+.offering-body-caption-new h5 {
+	line-height:1.4em;
+}
+
+footer .row:nth-child(1) .col:nth-child(1) {
+    width: 25%;
+}
+
+footer img {
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+}
+footer div.right {
+	margin-right:6%;
+}
+footer div.contact div {
+	display:table;
+	width:100%;
+}
+footer div.contact div a {
+    width: 45%;
+    display: table-cell;
+	vertical-align:top;	
+}
+footer div.contact div a img {
+    max-width: 90% !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+
+img {
+	height:auto;
+}
+.footer-grey-wrap .row .links ul {
+    margin-bottom: 2em;
+}
+a > i {
+    opacity: 0;
+}
+a:hover i {
+    opacity: 1;
+    transition: ease-in-out .5s;
+    width: auto;
+    margin: 0 0 0 4px;
+}
+.cta.open:hover:after {
+	display:none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+.TeamMembers .half ul li a {
+    padding: 0;
+}
+
+a>i {
+    opacity: 0.9;
+}
+
+.social a:hover i, a:hover i.fa {
+	margin-left:0;
+}
+
+.tm_photo i.fa.fa-envelope {
+    font-size: 30px;
+    vertical-align: middle;
+}
+.filming-features .feature {
+    color: white;
+	vertical-align:top;
+}
+.filming-features img {
+    display: block;
+    clear: both;
+    margin: 0 auto 1em auto;
+}
+.page-id-4021 .cstm-inner-container-7.clearfix {
+    width: auto;
+    margin: 3% auto;
+    padding: 0 4%;
+}
+.page-id-4021 .cstm-section-7 .cstm-inner-4-divs-section7 .inner-col1 {
+    width: 24%;
+    margin-right: 1%;
+}
+.page-id-4224 .development-process.sides .content {
+	padding-bottom:0;
+}
+
+.content .half .h-inner ul li, .content .a-sub ul li {
+    padding-left: 1.5em;
+    line-height: 1.5em;
+}
+		.half ul {
+    padding: 0;
+	}
+
+.fully-turnkey-body-r h4 {
+    position: absolute;
+    left: 0.45em;
+    top: 0.1em;
+    z-index: -1;
+}
+.fully-turnkey-body-l h4 {
+    position: absolute;
+    left: 1.05em;
+    margin-top: 0.08em;
+}
+.fully-turnkey-body-m img {
+    margin: 0 auto;
+    display: block;
+}
+.circle-animation {
+    top: 42%;
+}
+.righty {
+    max-width: 40%;
+    float: right;
+}
+	.container_inner .banner_text {
+    color: #fff;
+    max-width: 600px;
+    float: left;
+    width: 55%;
+	}
+section.top > .banner_outer {
+    height: auto !important;
+    padding: 2em 0;
+}
+.fully-turnkey-body-m {
+	position:relative;
+}
+
+/* scales videos to keep full size */
+.videowrap {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+/* end scales */
+.videowrap iframe, .videowrap object, .videowrap embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.content.row.comodoTL a img {
+    display: inline-block;
+    float: left;
+    margin-left: 0.5em;
+}
+
+/* twitter feed */
+.col-md-4.twt.right.eq {
+    overflow: hidden;
+}
+.content ul li:after {
+	top:0.2em;
+}
+		.cstm-section-4, .cstm-section-4 .cstm-inner-container-4.clearfix, .cstm-inner-container-2.clearfix, .cstm-inner-container-5.clearfix, .cstm-inner-container-7.clearfix  {
+		width:auto !important;
+	}
+
+.cstm-section-5 .cstm-inner-container-5 {
+    padding: 30px;
+}
+ul.slick-dots {
+    display:none !important;
+	}
+	.cstm-htc {
+    padding: 0 !important;
+}
+
+/*==11-09-2020=start==*/
+section.solutions .offering-body-new p {
+    display:block;
+	padding-bottom: 0;
+}
+
+/*==11-09-2020=end==*/
+
+@media(min-width:1265px){
+	.home .top {
+    background-position: 100% 100% !important;
+	}
+	.half.cstm-halfbox-left-1, .half.cstm-halfbox-right-2 {
+	width:66%;		
+	}
+		.half.cstm-halfbox-left-2, .half.cstm-halfbox-right-1 {
+	width:33%;		
+	}
+}
+
+@media(min-width:992px){
+
+	.fully-turnkey-body-l h4 {
+    left: 14%;
+    font-size: 100px;
+	}
+	.fully-turnkey-body-r h4 {
+    left: 0.7em;
+    top: 0.15em;
+    font-size: 100px;
+	}
+}
+
+@media (max-width: 1140px) {
+	.righty {
+display:none;
+	}
+	.container_inner .banner_text {
+    float: none;
+    width: auto;
+		max-width:none;
+		text-align:center;
+	}
+}	
+
+
+@media(max-width:1048px){
+		.half.cstm-halfbox-left-2 {
+    clear: both;
+	}
+}
+@media (max-width: 1024px) and (min-width: 992px){
+.services-div + .services-div:before {
+    top:-59px;
+	right:95%;
+	}
+}
+
+@media (max-width: 991px) {
+
+.content ul li {
+    padding: 0 0 0 74px;
+    min-height: auto;
+	}
+	.fully-turnkey-body-l ul li{
+		background: none;
+		padding: 0 0 20px;
+		margin-left: 60px;
+	}
+	body.page-id-4292 .content ul li {
+    padding: 0;
+    line-height: 1.4em;
+	}
+	.page-id-4021 .cstm-section-7 .cstm-inner-4-divs-section7 .inner-col1,  .page-id-4021  .cstm-section-7 .cstm-inner-4-divs-section7 .inner-col2, .page-id-4021 .cstm-section-7 .cstm-inner-4-divs-section7 .inner-col3,.page-id-4021 .cstm-section-7 .cstm-inner-4-divs-section7 .inner-col4 {
+    width: 49%;
+    margin: 0 1% 1em auto;
+		text-align:center;
+	}
+	.page-id-4021 .cstm-section-7 .cstm-inner-4-divs-section7 .inner-col3 {
+		clear:both;
+	}
+	.wrapper-with-sidebar .ws-sidebar ul li {
+    padding-left: 0;
+		line-height: 1.8em;
+    margin: 0.5em auto;
+	}
+		.wrapper-with-sidebar .ws-sidebar ul li:after {
+    top:0.4em;
+	}
+	.solutions .content ul li {
+    padding: 0;
+    line-height: 1.4em;
+	}
+	.services-div ul li {
+		padding: 0 0 0 44px !important;
+		margin-left: 40px;
+	}
+
+	.page-id-5720 .half.eq.right.top-padding {
+    width: 55%;
+	}
+	.page-id-5720 .half.eq.left.flex {
+    width: 45%;
+	}
+	.page-id-3497 .content .half .h-inner ul li, .page-id-3497 .content .a-sub ul li {
+    padding: 0.4em 0 0.4em 5em;
+		text-align:left;
+	}
+}
+
+@media(max-width:960px){
+	.PhotoSlider {
+    position: relative;
+    top: auto;
+    transform: none;
+    width: 100%;
+	}
+	.photoslidersection .half {
+    position: relative;
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    height: auto !important;
+    margin: 0 auto;
+    clear: both;
+    display: block;
+	}
+	.photoslidersection .half.misfit.gradient {
+    height: auto !important;
+	}
+	.half.PS-wrap.eq {
+    margin-bottom: 3em;
+	}
+}
+
+@media(max-width:880px){
+	.circle-animation {
+    top: 39%;
+	}
+}
+@media (max-width: 1200px) {
+	.menu_trigger {
+    display: block;
+	}
+
+	nav:not(.mm-menu) {
+    display: none;
+	}
+}
+@media (max-width: 840px){
+	
+	.filming-features {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+	}
+	.filming-features .feature {
+		display:inline-block;
+		width:30%;
+	}
+		.filming-features .feature:nth-child(4) {
+		clear:both;
+	}
+	.page-id-4021 .cstm-box-inner1 {
+		text-align:center;
+	}
+	.page-id-4021 .cstm-box-inner1 img {
+		display:block;
+		margin:0 auto 1em auto;
+	}
+
+	.half ul {
+    padding: 0 0 0 2em;
+	}
+		.page-id-3497 .content .half .h-inner ul , .page-id-3497 .content .a-sub ul {
+    padding-left:1em;
+	}
+	.core-services, div.app-platforms, div.vt-tabs {
+		display:block !important;
+	}
+	.core-services .sb.eq, div.vt-tab {
+		width:100%;
+		clear:both;
+	}
+	
+	div.app-platform {
+    width: 100%;
+    clear: both;
+    margin: 0 auto 1em auto !important;
+    padding: 1em 0 !important;
+}
+	div.vt-tab {
+		height:auto;
+		margin-left:0;
+	}
+	.vt-tab-content {
+    position: relative;
+	}
+	div.app-platform p {
+		padding:0 1em;
+	}
+	.app-device img {
+    max-width: 83%;
+    max-height: 41%;
+    width: auto;
+	}
+	.app-device h5 {
+    font-size: 1em;
+    line-height: 1.2em;
+	}
+	.app-device img.alignnone.size-full.wp-image-4246{
+		padding-bottom:2em;
+	} 
+	.app-device img.alignnone.size-full.wp-image-4242 {
+		padding-bottom:1.5em;
+	}
+
+	.cstm-inner-container-5.clearfix .half {
+		padding:30px 0 !important;
+	}
+	.half {
+		width:100% !important;
+		clear:both;
+		text-align:center;
+		height:auto !important;
+	}
+	.half > * {
+		margin:0 auto;
+		text-align:left;
+	}
+
+}
+
+@media(min-width:767px) and (max-width:840px){
+	.footer-grey-wrap ul.info li strong {
+    width: 70px;
+	}
+	.footer-grey-wrap ul.info li, .footer-grey-wrap ul.info li a {
+		font-size:0.9em;
+	}
+	.footer-grey-wrap ul.social{
+		margin-top:0;
+	}
+}
+
+@media(max-width:767px){
+			.hero-ctas {
+		text-align:center
+	}
+	.footer-grey-wrap ul.social {
+		margin-top:0 !important;
+	}
+	.hero-ctas p {
+		padding-left:0;
+
+	}
+	.hero-ctas p, .hero-ctas p a, .hero-ctas a.cta.open {
+		display:block;
+		clear:both;
+		margin:0.5em auto !important;
+		}
+	.test-wrap {
+    margin-top: 0;
+	}
+	footer li, footer h6 {
+    text-align: center;
+}
+	.footer-grey-wrap ul li {
+    line-height: 1.2em;
+		padding-left:0 !important;
+		border-bottom: none !important;
+	}
+	.footer-grey-wrap ul.info li > i, .footer-grey-wrap ul.info li strong {
+		display:none;
+	}
+	.footer-grey-wrap .links, .footer-grey-wrap .row .col .links {
+    width: 100%;
+	}
+	.footer-grey-wrap .contact ul.info li a {
+		width:auto;
+	}
+
+		footer .row:nth-child(1) .col:nth-child(1) {
+    width: 100%;
+	}
+	.learn-more-btn {
+		margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+	}
+	.cta {
+		display:block;
+	}
+	.brand-logo-item {
+    padding: 1% 2%;
+    max-width: 20%;
+	}
+
+		.fully-turnkey-body {
+		max-width:95%;
+	}
+		* .d-flex {
+		padding-left:0 !important;
+	}
+	.fully-turnkey-body >div h4, .fully-turnkey-body >div h3 {
+    display: block;
+    clear: both;
+    width: 100%;
+    text-align: center;
+	}
+	.fully-turnkey-body >div h4 {
+    position: absolute !important;
+    left: 0.275em;
+    text-align: left !important;
+    top: -.08em;
+	}
+	.fully-turnkey-body >div p, .fully-turnkey-body >div ul {
+		max-width:none;
+		width:50%;
+		display:inline-block;
+	}
+	.fully-turnkey-body >div p {
+    margin: 1em auto;
+		padding:1em 0 0 10%;
+	}
+	.fully-turnkey-body >div ul {
+		width:48%;
+	}
+	.services-div {
+    padding-left: 0;
+	}
+	.fully-turnkey-body > div:nth-child(2) ul, .fully-turnkey-body > div:nth-child(3) ul {
+		margin-left:33%;
+	}
+	.left-side {
+    width: 18%;
+    margin-right: 2%;
+	}
+	.cstm-box-8-inner p {
+		text-align:center;
+	}
+	.cstm-box-8-inner p:nth-child(2){
+		margin-top:2em;
+	}
+	.testimonials .a-slide {
+    padding: 30px 30px 30px !important;
+		font-size: 0.8em;
+    line-height: 1.4em;
+	}
+	.a-slide p {
+		font-size:1em;
+	}
+	.a-slide .author {
+		padding-left:1em;
+		width:86%;
+		margin:0 auto;
+	}
+	.page-id-4363 .a-slide .author {
+    padding-left: 72px;
+}
+	.page-id-4363  .testimonials .slick-prev {
+		display:none;
+	}
+
+
+		div.institutions .logos {
+		text-align:center;
+		display:inline-block;
+	}
+	div.institutions .logos p {
+    width: 42%;
+    display: inline-block;
+    text-align: center;
+    padding: 1em 4%;
+	}
+	div.institutions .logos p img {
+    height: auto;
+    width: 100% !important;
+    vertical-align: middle;
+	}
+	.photoslidersection .four-img-part2 img, .photoslidersection .four-img-part1 img {
+    width: 100%;
+    clear: both;
+	}
+
+
+}
+
+@media(max-width:600px){
+		.fully-turnkey-body >div p {
+		padding:1em 0 0 0;
+			width:40%;
+	}
+		.fully-turnkey-body >div ul {
+		width:60%;
+	}
+		.fully-turnkey-body > div:nth-child(2) ul, .fully-turnkey-body > div:nth-child(3) ul {
+		margin-left:25%;
+			width:75%;
+	}
+	.icon-content-box .h-inner {
+		padding-left:0;
+		padding-right:0;
+	}
+	.icon-content-box .right-side {
+		width:74%;
+	}
+
+}
+
+/* Nov 21, 2019 */
+span.offering-gradient {
+	background: linear-gradient(180deg, rgba(9,80,128,0) 50%, rgba(9,80,128,1) 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	display: block;
+	border-radius: 10px;
+}
+.offering-body-new li:hover .offering-body-div-new h6 {
+	border-radius: 10px;
+}
+.offering-body-caption-new {
+	text-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+/* CONCEPT */
+.fully-turnkey {
+	background: #eff3f5;
+}
+.fully-turnkey-body h4 {
+	color: #b4bdc3;
+	z-index: 0;
+}
+.fully-turnkey-body h3 {
+	z-index: 5;
+}
+.fully-turnkey-body h3:before {
+	color: rgba(208,219,226,.5);
+}
+.services-div ul li {
+	z-index: 5;
+	position: relative;
+}
+.circle-animation {
+	z-index: 0;
+}
+.fully-turnkey-body-m img {
+	z-index: 5;
+	position: relative;
+}
+
+/*==09-09-2020=start==*/
+section.banner {
+    background-position: top;
+}
+	.careers_page_banner{
+    background-position: top;
+}
+/*==09-09-2020=end==*/
+.contact-form select {
+	display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 5px 0px 0px 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #17282b;
+    font-family: 'Inter';
+		font-weight: 300;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .blog .book-floater {
+    right: -70px;
+  }
+}
+
+
+footer .col-md-4.eq {
+    padding: 20px;
+}
+
+.footer-grey-wrap .feed .contact ul.info li {
+    padding-left: 25px;
+}
+
+ul.social li {
+    position: relative;
+    color: #42454a;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 0 14px;
+}
+
+.container_blog .content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.container_blog .content .post_big {
+  width: 100%;
+}
+
+.cta-single .content h4 {
+  color: #000;
+}
+
+.cta-single .content a {
+  background: #1b74bb;
+  color: #fff;
+}
+
+.cta-single .content a:hover {
+  background: #414a59;
+}
+
+.learn-more-btn:hover {
+	color: #fff;
+}
+
+.content-section .half.eq {
+	height: 430px !important;
+}
+
+.whitepapers-div h3 {
+	font-family: 'MaisonNeueBold', sans-serif;
+}
+
+		</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script><meta name="google-site-verification" content="B6ESLLs5IQMy5dxvGXJXKxGkNKTsSHS43tH9H0UhYA0">
+
+<script type="rocketlazyloadscript">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '423984015052532');
+  fbq('track', 'PageView');
+</script>
+
+
+</head>
+<div class="a-slide modal" id="967">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2018/02/ronicerga-1.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#0b7964656225686e796c6a4b7d797d627862646525686a"> <img src="" class="sc_icon"> </a></li>
+<li><a href="https://twitter.com/ronicerga"><img src="" class="sc_icon"></a></li>
+<li><a href="https://www.linkedin.com/in/ronicerga/"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Roni Cerga &#8211; Co-Founder, CEO</h4>
+<p><em>“Our mission is not to simply make world class experiential solutions easy &#038; accessible but to prepare organizations for the future. The path to digital innovation is ever evolving. This is why we place a focus on the journey before the destination.”-Roni Cerga</em></p>
+<p>A passionate business leader and innovator. His vision has helped shape world class offerings by utilizing cutting edge cross functional growth strategies. He maintains strong fundamentals by investing in a diverse organizational culture &#038; people, streamlined process and the very best in product quality. He is a strong believer that the foundation to sustaining exponential growth is the result of empowering &#038; offering a sense of ownership to everyone in the organization and beyond to our clients.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="964">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2018/02/Lorne.jpeg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#3a565548545f145c5b5e5f7a4c484c534953555414595b"> <img src="" class="sc_icon"> </a></li>
+<li><a href="https://twitter.com/LorneFade"><img src="" class="sc_icon"></a></li>
+<li><a href="https://www.linkedin.com/in/lornefade/"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Lorne Fade &#8211; Co-Founder, COO</h4>
+<p><em>“As we continue to capitalize on the tremendous technological opportunities ahead we must always respect the competitive advantages that form the cornerstone of our brand – our people and our culture.” </em></p>
+<p>Lorne Fade oversees all aspects of VR Vision’s application development, event activations, hardware deployment and 360 videography. He is responsible for guiding the company’s overall direction and strategic priorities by utilizing his digital marketing background to drive business development forward as well as driving sales for VR Vision through creative marketing campaigns and targeted advertising methods.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="2559">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2018/02/david-o.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#c8aca9bea1ace6bcbdababa1a9baa7a6ad88bebabea1bba1a7a6e6aba9e8"> <img src="" class="sc_icon"> </a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>David Tucciarone &#8211; Manager of Custom Development</h4>
+<p>An experienced Creative Director and Developer, David specializes in creating immersive digital virtual experiences and interactive entertainment on both small and large scale. He has worked on over 20 successful projects with over 15 million users worldwide for both the mobile and enterprise training platforms.</p>
+<p>At VR Vision, David oversees all productions from concept to completion to ensure all application development meets a gold standard of being completely turn-key and high quality.  He has led successful projects for VR Vision with enterprise clients like Toyota, Tennis Canada, University of Toronto &amp; Alchemy Systems.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="2568">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2018/02/alexpryor.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#fe9f929b86d08e8c87918cbe888c88978d979190d09d9f"> <img src="" class="sc_icon"> </a></li>
+<li><a href="https://twitter.com/vrvisioninc"><img src="" class="sc_icon"></a></li>
+<li><a href="https://www.linkedin.com/in/alexpryor1/"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Alex Pryor &#8211; Senior 360° Content Director</h4>
+<p>Alex has a passion for creating digital content and using multimedia to help businesses achieve their goals. The new wave of virtual reality and 360° content brings endless possibilities for business solutions and marketing material and Alex is dedicated to being at the forefront of this innovation.</p>
+<p>He manages the 360° department of VR Vision, directing a variety of 360° content, such as 360° video and virtual tours. Alex has a keen eye to use these mediums as practical business applications to help businesses excel in the age of technology.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="2570">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2018/02/joannahapelo.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#9ef4f1fff0f0fff6b0ffeefbf2f1dee8ece8f7edf7f1f0b0fdff"> <img src="" class="sc_icon"> </a></li>
+<li><a href="https://twitter.com/joannahapelo"><img src="" class="sc_icon"></a></li>
+<li><a href="https://www.linkedin.com/in/joannah-apelo/"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Joannah Apelo &#8211; SVP, Operations &#038; Healthcare</h4>
+<p>Dedicated Nurse and technology expert with over 10 years providing client care and technology consulting in Canada and internationally. Joannah is driven to transform the way we view &amp; approach client care. As an expert in both VR and Nursing Joannah’s goal is to greatly improve the quality of life for all.</p>
+<p>Responsible for overseeing the development, testing, monitoring and implementation of Virtual Reality technologies. Joannah flawlessly combines science, business, and technology to make possible for life changing deployments.</p>
+<p>She is also the CEO, Founder of Reality Well (A VR Vision Group Company). Reality Well is a Virtual Reality Platform for Senior Living. [www.realitywell.com]
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="2573">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2018/02/liznicholson.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#adc1c4d783c3c4cec5c2c1dec2c3eddbdfdbc4dec4c2c383cecc8d"> <img src="" class="sc_icon"> </a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Liz Nicholson &#8211; Enterprise Business Development Director</h4>
+<p>With an appetite for learning and advancing in new technologies Liz has what it takes to anticipate trends and collaborate with her peers. An experienced National Accounts Manager with a demonstrated history of working in the marketing and advertising industries for well over decade. Skilled in Contact Centers, Management, Customer Service, Account Management, and Sales. Extensive experience working with high tech executives and CEO&#8217;s producing high volume sales results advancing new business development.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="3723">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2018/09/20181025_115702-e1549312289298.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#29404847074346474c5a695f5b5f405a404647074a48"> <img src="" class="sc_icon"> </a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Ian Jones &#8211; VP, Enterprise Sales</h4>
+<p>An experienced and accomplished business development and management executive committed to driving exceptional sales results for organizations, while exceeding all expectations for customers. Possesses a keen ability to motivate and inspire staff and colleagues to achieve success, both personally and professionally. Experienced in transforming laggard sales teams into highly focused and disciplined peak performers.</p>
+<p>Specialties: Sales Strategy, Corporate &amp; Business Development, Sales Management, Leadership, Coaching and Motivation, Market Planning, Energy, Legal and Tech industry.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="6653">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2019/03/Karan-Portrait-1.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#3e555f4c5f50104d565f4c535f7e484c48574d575150105d5f"> <img src="" class="sc_icon"> </a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Karan Sharma &#8211; Senior 3D Modeler/Designer</h4>
+<p>Karan Sharma is a 3D Artist with a passion for creating 3D assets and Environments for game development. He has an understanding of 3D Modeling, Texturing and Digital Sculpting and passion for Game Art along with constantly learning and advancing techniques while staying updated with industry standards.</p>
+<p>He also has a solid understanding of composition, lighting, colour, form and structure and the ability to apply this knowledge in a 3D interactive world. Karan also has a hobby for photography and travelling.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="6751">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2019/03/Wei-Portrait-2.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#3b4c5e524f525515424e5e557b4d494d524852545515585a"> <img src="" class="sc_icon"> </a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Wei Tin Yuen &#8211; VR Developer</h4>
+<p>Wei is a young and talented Unity developer, with passion for anything involving creative design. But what good is something if it doesn&#8217;t do anything? With that in mind, Wei is highly interested in creating function as well, he loves to architect large yet pristine systems of code. With experience working as an Asset Developer, Wei&#8217;s game assets are downloaded by thousands of other Unity developers.</p>
+<p>As a generalist developer, he is competent in both art and programming fields, and highly involved in the entire development cycle. Quickly building applications and making improvements where possible, Wei pushes the envelope of what VR can achieve.</p>
+</div>
+</div>
+</div>
+<div class="a-slide modal" id="7254">
+<div class="half">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2019/10/ahmad_-_original_720.jpg" class="h-inner tm_photo rocket-lazyload" style="">
+
+<ul class="clearfix">
+<li><a href="../../cdn-cgi/l/email-protection.html#9efff6f3fffab0ffedf5ecf7dee8ece8f7edf7f1f0b0fdff"> <img src="" class="sc_icon"> </a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+<li><a href="#"><img src="" class="sc_icon"></a></li>
+</ul>
+</div>
+</div>
+<div class="half tm_content">
+<div class="h-inner">
+<h4>Ahmad Askri &#8211; Junior VR Developer</h4>
+<p>I am a game developer who is passionate about exploring the new upcoming and emerging technologies and developing software for them. Aside from programming, I have a variety of different skills like 3D modelling, 3D animation, 2D animation and Video/Audio editing.</p>
+</div>
+</div>
+</div>
+<div id="load"><a href="../../index.htm" class="bounceIn"><img width="530" height="185" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20530%20185'%3E%3C/svg%3E" alt="VR Vision | Virtual Reality Training Solutions for Enterprise" data-lazy-src="https://vrvisiongroup.com/wp-content/themes/VRV/assets/images/logoload.png"><noscript><img width="530" height="185" src="../../wp-content/themes/VRV/assets/images/logoload.png" alt="VR Vision | Virtual Reality Training Solutions for Enterprise"></noscript></a></div>
+<body id="internal" class="archive tag tag-museum-vr tag-200">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3Q7WHS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="white-wrapper mfp-hide" id="popform">
+<button type="button" class="mfp-close">x close</button>
+<div class="smaller contact-halfs no-padding clearfix">
+<div class="half eq">
+<div class="h-inner">
+<h5>Send Us A Message</h5>
+<form action="https://vrvisiongroup.com/wp-content/themes/VRV/action.php" method="post" class="contact-form cus-pop clearfix" novalidate="">
+<div class="input-field">
+<label for="name">Name</label>
+<input type="text" name="name" id="name" required="">
+<input type="text" name="email_check" id="email_check">
+</div>
+<div class="input-field">
+<label for="email">Email</label>
+<input type="email" name="email" id="email" required="">
+</div>
+<div class="input-field">
+<label for="company">Company</label>
+<input type="text" name="company" id="company">
+</div>
+<div class="input-field">
+<label for="phone">Phone</label>
+<input type="text" name="phone" id="phone">
+</div>
+<div class="input-field">
+<label for="noe">Number of Employees</label>
+<select name="noe" id="now" required="">
+<option disabled="" selected=""></option>
+<option value="1-20">1-20</option>
+<option value="21-200">21-200</option>
+<option value="201-10,000">201-10,000</option>
+<option value="10,000+">10,000+</option>
+</select>
+</div>
+<div class="input-field">
+<label for="productInterest">Product Interest</label>
+<select name="productInterest" id="productInterest" required="">
+<option disabled="" selected=""></option>
+<option value="VR for Training">VR for Training</option>
+<option value="AR for Assisted Work">AR for Assisted Work</option>
+<option value="360 Content Production">360 Content Production</option>
+<option value="VR/AR for Marketing">VR/AR for Marketing</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="input-field">
+<label for="message">Your Message</label>
+<textarea type="text" name="message" id="message" required=""></textarea>
+</div>
+<input type="submit" value="SEND" class="cta">
+</form>
+</div>
+</div>
+<div class="half gradient misfit eq">
+<div class="h-inner">
+<h5>Contact Info</h5>
+<ul class="info">
+<li><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Toronto, Canada</strong> <a href="https://bit.ly/2IMiDqw" style="text-decoration:none;">250 The Esplanade Suite #310, <br>Toronto, ON, Canada, M5A 1J2</a></li>
+<li><i class="fa fa-map-marker" aria-hidden="true"></i><strong>New York, USA</strong> <a href="https://goo.gl/maps/68eCR7r9zg42" style="text-decoration:none;">276 5th Avenue, Suite 704 #787, <br>New York, New York, 10001</a></li>
+<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><strong>Phone</strong> <a href="tel:16473585050">1-888-253-3264</a></li>
+</ul>
+<ul class="social">
+<li><a target="_blank" href="https://www.facebook.com/vrvisioninc/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://twitter.com/vrvisioninc"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://www.youtube.com/channel/UCc9hEJyEemiJe9DIOjBquhw"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://www.instagram.com/vrvisioninc"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://www.linkedin.com/company/vr-vision-inc"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="menu-helper"></div>
+<div class="container">
+
+<section class="top" style="background-color:">
+
+<style>
+				@media (min-width:500px){.home .top {background-image:url() !important}}
+			</style>
+
+<header class="animated clearfix">
+<a href="../../index.htm" class="logo"><img width="157" height="58" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20157%2058'%3E%3C/svg%3E" class="logo_white" alt="VR Vision | Virtual Reality Training Solutions for Enterprise" data-lazy-src="https://vrvisiongroup.com/wp-content/themes/VRV/assets/images/logo.png"><noscript><img width="157" height="58" src="../../wp-content/themes/VRV/assets/images/logo.png" class="logo_white" alt="VR Vision | Virtual Reality Training Solutions for Enterprise"></noscript><img width="157" height="56" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20157%2056'%3E%3C/svg%3E" class="logo_sticky" alt="VR Vision | Virtual Reality Training Solutions for Enterprise" data-lazy-src="https://vrvisiongroup.com/wp-content/themes/VRV/assets/images/logosticky.png"><noscript><img width="157" height="56" src="../../wp-content/themes/VRV/assets/images/logosticky.png" class="logo_sticky" alt="VR Vision | Virtual Reality Training Solutions for Enterprise"></noscript><img width="112" height="112" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20112%20112'%3E%3C/svg%3E" class="logo_mobile" alt="VR Vision | Virtual Reality Training Solutions for Enterprise" data-lazy-src="https://vrvisiongroup.com/wp-content/themes/VRV/assets/images/logomobile.png"><noscript><img width="112" height="112" src="../../wp-content/themes/VRV/assets/images/logomobile.png" class="logo_mobile" alt="VR Vision | Virtual Reality Training Solutions for Enterprise"></noscript><img width="112" height="112" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20112%20112'%3E%3C/svg%3E" class="logo_mobile_white" alt="VR Vision | Virtual Reality Training Solutions for Enterprise" data-lazy-src="https://vrvisiongroup.com/wp-content/themes/VRV/assets/images/logomobile_white.png"><noscript><img width="112" height="112" src="../../wp-content/themes/VRV/assets/images/logomobile_white.png" class="logo_mobile_white" alt="VR Vision | Virtual Reality Training Solutions for Enterprise"></noscript></a>
+<a href="#mm_menu" class="menu_trigger"><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a>
+<nav id="mm_menu" class="clearfix">
+<div class="working">
+<ul id="menu-main-menu" class="menu clearfix"><li id="menu-item-3934" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3934"><a href="#">Solutions</a>
+<ul class="sub-menu">
+<li id="menu-item-6152" class="training-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-6152"><a href="../../virtual-reality-training/index.htm">Virtual Reality Training</a></li>
+<li id="menu-item-9268" class="vision-portal-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-9268"><a href="#">Vision Portal</a></li>
+</ul>
+</li>
+<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36"><a href="#mm-3">Services</a>
+<ul class="sub-menu">
+<li id="menu-item-3933" class="virtual-reality-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-3933"><a href="../../virtual-reality-development/index.htm">Virtual Reality</a></li>
+<li id="menu-item-3982" class="augmented-reality-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-3982"><a href="../../augmented-reality-development/index.htm">Augmented Reality</a></li>
+<li id="menu-item-4447" class="video-production-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-4447"><a href="../../360-video-production/index.htm">360° Video Production</a></li>
+<li id="menu-item-3980" class="web-mobile-apps-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-3980"><a href="../../virtual-reality-development/apps/index.htm">Web &#038; Mobile Apps</a></li>
+</ul>
+</li>
+<li id="menu-item-9012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9012"><a href="#">Insights</a>
+<ul class="sub-menu">
+<li id="menu-item-27" class="blog-menu menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-27"><a href="../../insights/index.htm">Insights</a></li>
+<li id="menu-item-34" class="use-cases-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="../../use-cases/index.htm">Use Cases</a></li>
+<li id="menu-item-9025" class="roi-calculator-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-9025"><a href="../../roi-calculator/index.htm">ROI Calculator</a></li>
+<li id="menu-item-9100" class="whitepapers-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-9100"><a href="../../whitepapers/index.htm">Whitepapers</a></li>
+</ul>
+</li>
+<li id="menu-item-8791" class="bubble menu-item menu-item-type-custom menu-item-object-custom menu-item-8791"><a href="../../careers/index.htm#hiring">👩‍💻 We&#8217;re hiring!</a></li>
+<li id="menu-item-7392" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7392"><a href="#">Company</a>
+<ul class="sub-menu">
+<li id="menu-item-7379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7379"><a href="../../company/index.htm">About Us</a></li>
+<li id="menu-item-3570" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3570"><a href="../../careers/index.htm">Careers</a></li>
+<li id="menu-item-8237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8237"><a href="../../newsroom/index.htm">Newsroom</a></li>
+</ul>
+</li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="../../contact/index.htm">Contact</a></li>
+<li id="menu-item-341" class="cta menu-item menu-item-type-custom menu-item-object-custom menu-item-341"><a href="#popform">Book a Demo</a></li>
+</ul> </div>
+</nav>
+</header> <section class="banner clearfix" style="background-image:url(../../wp-content/uploads/2020/11/vr-blog-insights.jpg);" alt="bg-vrv">
+<div class="b-inner content clearfix">
+<div class="book-floater">
+<h6><strong>Get in touch with us today to discuss Virtual Reality Training for your business</strong></h6>
+<div class="hero-ctas">
+<a href="#popform" class="cta open">Book a Demo</a>
+</div>
+</div>
+</div>
+</section>
+<span class="point"></span>
+</section>
+<section class="solutions">
+<div class="content clearfix">
+<h1>VR Training Insights</h1>
+<div class="articles-wrapper clearfix">
+<div class="article">
+<div data-bg="https://vrvisiongroup.com/wp-content/uploads/2019/04/ar-museum.jpg" class="a-image rocket-lazyload" style=""><a href="../../augmented-virtual-reality-and-thier-impact-on-museums/index.htm"></a></div>
+<ul class="tags clearfix"><li><a href="../augmented-reality-for-museums/index.htm" rel="tag">augmented reality for museums</a></li><li><a href="../museum-ar/index.htm" rel="tag">museum ar</a></li><li><a href="index.htm" rel="tag">museum vr</a></li></ul> <h5><a href="../../augmented-virtual-reality-and-thier-impact-on-museums/index.htm">Augmented &#038; Virtual Reality and Thier Impact on Museums</a></h5>
+</div>
+</div>
+</div>
+</section></div>
+
+<footer>
+<div class="footer-grey-wrap">
+<div class="content row feed clearfix hide-on-mobile">
+<div class="col-md-4 eq">
+<h6>Latest Articles</h6>
+<ul class="info"><li class="listing-item"><a class="title" href="../../the-intersection-of-ai-vr-artificial-intelligence-virtual-reality-are-we-there-yet/index.htm">The Intersection of Artificial Intelligence &#038; Virtual Reality: Are We There Yet?</a> <span class="date">January 9, 2023</span></li><li class="listing-item"><a class="title" href="../../eliminating-workplace-injury-with-digital-twins-and-virtual-reality/index.htm">Eliminating Workplace Injury with Digital Twins and Virtual Reality</a> <span class="date">November 21, 2022</span></li><li class="listing-item"><a class="title" href="../../vr-technology-empowers-safer-job-training-while-reducing-costs/index.htm">VR Technology Empowers Safer Job Training while Reducing Costs</a> <span class="date">November 7, 2022</span></li><li class="listing-item"><a class="title" href="../../virtual-reality-training-transforms-the-workplace/index.htm">Virtual Reality Training Is Transforming The Workplace</a> <span class="date">September 12, 2022</span></li><li class="listing-item"><a class="title" href="../../the-metaverse-the-next-chapter-for-the-internet/index.htm">The Metaverse: The Next Chapter for the Internet</a> <span class="date">August 16, 2022</span></li></ul> <ul class="info">
+<li><a href="../../insights/index.htm">View all articles</a></li>
+</ul>
+</div>
+<div class="col-md-4 twt eq">
+<h6>Recent Tweets</h6>
+
+
+<div id="ctf" class=" ctf ctf-type-usertimeline ctf-feed-1 info tweet ctf-styles ctf-list ctf-regular-style" data-ctfshortcode="{&quot;feed&quot;:1}" data-ctfdisablelinks="false" data-ctflinktextcolor="#" data-header-size="small" data-feedid="1" data-postid="6603" data-feed="1" data-ctfneeded="-191">
+<div class="ctf-tweets">
+
+<div class="ctf-item ctf-author-vrvisioninc ctf-new ctf-hide-avatar" id="1617562311979577344">
+<div class="ctf-author-box">
+<div class="ctf-author-box-link">
+
+<a href="https://twitter.com/vrvisioninc" target="_blank" rel="noopener noreferrer" class="ctf-author-name">VR Vision</a>
+
+<a href="https://twitter.com/vrvisioninc" class="ctf-author-screenname" target="_blank" rel="noopener noreferrer">@vrvisioninc</a>
+<span class="ctf-screename-sep">&middot;</span>
+</div>
+
+<div class="ctf-corner-logo">
+<svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" aria-label="twitter logo" data-fa-processed="" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg> </div>
+</div>
+<div class="ctf-tweet-content">
+<p class="ctf-tweet-text">
+Hello Toronto/GTA Unity Developers! VR Vision is hiring! If you’re interested in applying, send us an email at <a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="a1cbcec3d2e1d7d3d7c8d2c8cecf8fc2c0">[email&#160;protected]</a> with a quick blurb about yourself and why you think you fit into a startup environment and a portfolio. https://www.facebook.com/jobs/job-opening/882083516444686/?source=post_timeline #Developers #VR #Toronto </p><a href="https://twitter.com/vrvisioninc/status/1617562311979577344" target="_blank" rel="noopener noreferrer" class="ctf-tweet-text-media-wrap"><svg aria-hidden="true" aria-label="images in tweet" focusable="false" data-prefix="far" data-icon="image" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" class="svg-inline--fa fa-image fa-w-16 fa-9x ctf-tweet-text-media"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 336H54a6 6 0 0 1-6-6V118a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v276a6 6 0 0 1-6 6zM128 152c-22.091 0-40 17.909-40 40s17.909 40 40 40 40-17.909 40-40-17.909-40-40-40zM96 352h320v-80l-87.515-87.515c-4.686-4.686-12.284-4.686-16.971 0L192 304l-39.515-39.515c-4.686-4.686-12.284-4.686-16.971 0L96 304v48z" class=""></path></svg></a> 
+</div>
+</div>
+
+<div class="ctf-item ctf-author-vrvisioninc ctf-new ctf-hide-avatar" id="1613186353168089089">
+<div class="ctf-author-box">
+<div class="ctf-author-box-link">
+
+<a href="https://twitter.com/vrvisioninc" target="_blank" rel="noopener noreferrer" class="ctf-author-name">VR Vision</a>
+
+<a href="https://twitter.com/vrvisioninc" class="ctf-author-screenname" target="_blank" rel="noopener noreferrer">@vrvisioninc</a>
+<span class="ctf-screename-sep">&middot;</span>
+</div>
+
+<div class="ctf-corner-logo">
+<svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" aria-label="twitter logo" data-fa-processed="" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg> </div>
+</div>
+<div class="ctf-tweet-content">
+<p class="ctf-tweet-text">
+The Intersection of Artificial Intelligence &amp; Virtual Reality: Are We There Yet? https://vrvisiongroup.com/the-intersection-of-ai-vr-artificial-intelligence-virtual-reality-are-we-there-yet/ #VR #AI #VirtualReality #ArtificialIntelligence #ChatGPT #OpenAI #JasperAI #WriteSonic #LensaAI #MidJourney #ReplikaAI #MergedTechnology @vrvisioninc </p>
+</div>
+</div> </div>
+</div>
+<ul class="info tweet">
+<li><i class="fa fa-twitter" aria-hidden="true"></i><a href="https://twitter.com/vrvisioninc" target="_blank">View all tweets</a></li>
+</ul>
+</div>
+<div class="col-md-4 contact eq">
+<h6>Contact Us</h6>
+<ul class="info">
+<li><i class="fa fa-envelope-o" aria-hidden="true"></i><strong>Email</strong> <a href="../../cdn-cgi/l/email-protection.html#f9919c959596b98f8b8f908a9096979e8b968c89d79a9694"><span class="__cf_email__" data-cfemail="c7afa2ababa887b1b5b1aeb4aea8a9a0b5a8b2b7e9a4a8aa">[email&#160;protected]</span></a></li>
+<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><strong>Phone</strong> <a href="tel:16473585050">[+1] 888-253-3264</a></li>
+<li><i class="fa fa-map-marker" aria-hidden="true"></i><strong>Canada HQ</strong> <a href="#" style="cursor:text; text-decoration:none;">250 The Esplanade Suite #310<br>
+Toronto, ON, Canada<br>M5A 1J2</a></li>
+<div class="su-gmap su-u-responsive-media-yes"><iframe loading="lazy" width="600" height="400" src="about:blank" title="" data-rocket-lazyload="fitvidscompatible" data-lazy-src="//maps.google.com/maps?q=VR%20Vision%20Inc&#038;output=embed"></iframe><noscript><iframe width="600" height="400" src="//maps.google.com/maps?q=VR%20Vision%20Inc&output=embed" title=""></iframe></noscript></div> </ul>
+</div>
+</div>
+<div class="content row powered clearfix hide-on-mobile">
+<h6>Powered By</h6>
+<div class="logos">
+<img width="1080" height="44" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201080%2044'%3E%3C/svg%3E" alt="logos" data-lazy-src="https://vrvisiongroup.com/wp-content/uploads/2022/04/powered-by-new22.png"><noscript><img width="1080" height="44" loading="lazy" src="../../wp-content/uploads/2022/04/powered-by-new22.png" alt="logos"></noscript>
+</div>
+</div>
+<div class="content row last clearfix copy">
+<div class="col-md-10"><p>&copy; <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="rocketlazyloadscript">document.write(new Date().getFullYear())</script> <strong>VR Vision Group</strong> &#183; <a href="../../privacy-policy/index.htm">Privacy Policy</a> &#183; <a href="../../terms-and-conditions/index.htm">Terms & Conditions</a> &#183; <a href="../../terms-of-sale/index.htm">Terms of Sale</a> &#183;
+</p>
+<img width="2698" height="426" class="ftrimg" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202698%20426'%3E%3C/svg%3E" alt="Oculus ISV Partner" data-lazy-src="https://vrvisiongroup.com/wp-content/uploads/2021/01/Oculus_ISV_Partner_Pill_Clear_RGB.png"><noscript><img width="2698" height="426" class="ftrimg" loading="lazy" src="../../wp-content/uploads/2021/01/Oculus_ISV_Partner_Pill_Clear_RGB.png" alt="Oculus ISV Partner"></noscript>
+</div>
+<div class="col-md-2">
+<ul class="social">
+<li><a target="_blank" href="https://www.facebook.com/vrvisioninc/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://twitter.com/vrvisioninc"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://www.youtube.com/channel/UCc9hEJyEemiJe9DIOjBquhw"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://www.instagram.com/vrvisioninc"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a target="_blank" href="https://www.linkedin.com/company/vr-vision-inc"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+</ul></div>
+</div>
+</div>
+</footer>
+
+<script type="rocketlazyloadscript" data-minify="1" src="../../wp-content/cache/min/1/ajax/libs/izimodal/1.5.1/js/iziModal.min.js?ver=1674141572" defer=""></script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">panopress.imagebox();</script><style type="text/css" data-ctf-style="1">.ctf-feed-1 .ctf-more{color:#1c65b9!important;}.ctf-feed-1 .ctf-author-name{font-size:14px!important;}.ctf-feed-1 .ctf-tweet-text, .ctf-feed-1 .ctf-quoted-tweet-text{color:#ffffff!important;font-size:14px!important;}.ctf-feed-1 .ctf-quoted-tweet{color:#ffffff!important;}.ctf-feed-1 .ctf-twitterlink{color:#ffffff!important;}.ctf-feed-1.ctf-regular-style .ctf-item, .ctf-feed-1 .ctf-header{border-bottom:1px solid #ddd!important;}</style><script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/uploads/so-css/so-css-VRV.css?ver=1674141572' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49"></script><link data-minify="1" rel='preload' href='../../wp-content/cache/min/1/wp-content/plugins/shortcodes-ultimate/includes/css/shortcodes.css?ver=1674141572' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')" type='text/css' media='all'>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1674141572' id='swv-js' defer=""></script>
+<script type="fed6c22ccde05c079e51fcc9-text/javascript" id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/vrvisiongroup.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1674141572' id='contact-form-7-js' defer=""></script>
+<script type="fed6c22ccde05c079e51fcc9-text/javascript" id='leadin-script-loader-js-js-extra'>
+/* <![CDATA[ */
+var leadin_wordpress = {"userRole":"visitor","pageType":"archive","leadinPluginVersion":"10.0.19"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/2641011.js?ver=1674141572' async="" defer="" id='hs-script-loader'></script>
+<script type="fed6c22ccde05c079e51fcc9-text/javascript" id='wpcf7-redirect-script-js-extra'>
+/* <![CDATA[ */
+var wpcf7r = {"ajax_url":"https:\/\/vrvisiongroup.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/wpcf7-redirect/build/js/wpcf7r-fe.js?ver=1674141572' id='wpcf7-redirect-script-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1674141572' id='gtm4wp-form-move-tracker-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="fed6c22ccde05c079e51fcc9-text/javascript" id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/vrvisiongroup.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/plugins/beaf-before-and-after-gallery/assets/js/bafg-custom-js.js?ver=1674141572' id='bafg_custom_js-js' defer=""></script>
+<script type="fed6c22ccde05c079e51fcc9-text/javascript" id='ctf_scripts-js-extra'>
+/* <![CDATA[ */
+var ctf = {"ajax_url":"https:\/\/vrvisiongroup.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/plugins/custom-twitter-feeds/js/ctf-scripts.min.js?ver=2.0.3' id='ctf_scripts-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/js/superfish.min.js' id='superfish-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/js/iziModal.min.js' id='iziModal-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/slick/slick.min.js' id='slick-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/js/jquery.webticker.min.js' id='webticker-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/themes/VRV/assets/js/jquery.mmenu.min.all.js?ver=1674141572' id='mmenu-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/js/jquery.validate.min.js' id='validate-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/themes/VRV/assets/js/respond.src.js?ver=1674141572' id='respond-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/themes/VRV/assets/js/browser-os.js?ver=1674141572' id='browser-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/themes/VRV/assets/js/scroll.js?ver=1674141572' id='scroll-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/js/matchHeight-min.js' id='equalheights-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/js/jquery.magnific-popup.min.js' id='magnific-js' defer=""></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='../../wp-content/themes/VRV/assets/js/jquery.modal.min.js' id='modals-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/themes/VRV/assets/js/easyResponsiveTabs.js?ver=1674141572' id='ERT-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/themes/VRV/assets/js/map-function.js?ver=1674141572' id='map-js' defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='../../wp-content/cache/min/1/wp-content/themes/VRV/assets/js/functions.js?ver=1674141572' id='functions-js' defer=""></script>
+<script type="fed6c22ccde05c079e51fcc9-text/javascript">window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="../../wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js" type="fed6c22ccde05c079e51fcc9-text/javascript"></script><script type="fed6c22ccde05c079e51fcc9-text/javascript">function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+jQuery(document).ready(function(){
+jQuery('.comodoTL img').attr('alt', 'Comodo');
+});
+});</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">window.addEventListener('DOMContentLoaded', function() {
+jQuery(document).ready(function(){
+jQuery('.owl-dot').each(function(){
+jQuery(this).children('span').text(jQuery(this).index()+1+"/"+jQuery('.owl-dot').length);
+});
+});
+});</script>
+
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" id="hs-script-loader" async="" defer="" src="../../wp-content/cache/min/1/2641011.js?ver=1674141572"></script>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+_linkedin_partner_id = "158121";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="../../collect?pid=158121&fmt=gif">
+</noscript>
+<script type="fed6c22ccde05c079e51fcc9-text/javascript">"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link data-minify="1" rel="stylesheet" type="text/css" href="../../wp-content/cache/min/1/wp-content/themes/VRV/assets/slick/slick.css?ver=1674141571"><link href="../../wp-content/themes/VRV/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"><link rel='stylesheet' id='bootstrap-file-css' href='../../wp-content/plugins/vr_roi_calculator/assets/bootstrap/css/bootstrap.min-321.css?ver=1674989985' type='text/css' media='all'><link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' type='text/css' media='all'><link rel='stylesheet' id='classic-theme-styles-css' href='../../wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='contact-form-7-css' href='../../wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1674141571' type='text/css' media='all'><link rel='stylesheet' id='ctf_styles-css' href='../../wp-content/plugins/custom-twitter-feeds/css/ctf-styles.min.css?ver=2.0.3' type='text/css' media='all'><link rel='stylesheet' id='wpcf7-redirect-script-frontend-css' href='../../wp-content/plugins/wpcf7-redirect/build/css/wpcf7-redirect-frontend.min.css?ver=6.1.1' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='wp-pagenavi-css' href='../../wp-content/cache/min/1/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=1674141571' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='modals-css' href='../../wp-content/cache/min/1/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css?ver=1674141571' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='style-css' href='../../wp-content/cache/min/1/wp-content/themes/VRV/style.css?ver=1674141572' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='custom-styles-css' href='../../wp-content/cache/min/1/wp-content/themes/VRV/custom-style.css?ver=1674141572' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='bafg_twentytwenty-css' href='../../wp-content/cache/min/1/wp-content/plugins/beaf-before-and-after-gallery/assets/css/twentytwenty.css?ver=1674141572' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='bafg-style-css' href='../../wp-content/cache/min/1/wp-content/plugins/beaf-before-and-after-gallery/assets/css/bafg-style.css?ver=1674141572' type='text/css' media='all'><link rel='stylesheet' id='wp-add-custom-css-css' href='../../index-1.htm?display_custom_css=css&#038;ver=6.1.1' type='text/css' media='all'><link data-minify="1" rel="stylesheet" type="text/css" href="../../wp-content/cache/min/1/ajax/libs/izimodal/1.5.1/css/iziModal.min.css?ver=1674141572"><link data-minify="1" rel="stylesheet" type="text/css" media="all" href="../../wp-content/cache/min/1/wp-content/plugins/panopress/css/panopress.css?ver=1674141572"><link data-minify="1" rel='stylesheet' id='so-css-VRV-css' href='../../wp-content/cache/min/1/wp-content/uploads/so-css/so-css-VRV.css?ver=1674141572' type='text/css' media='all'><link data-minify="1" rel='stylesheet' id='su-shortcodes-css' href='../../wp-content/cache/min/1/wp-content/plugins/shortcodes-ultimate/includes/css/shortcodes.css?ver=1674141572' type='text/css' media='all'></noscript><script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fed6c22ccde05c079e51fcc9-|49" defer=""></script></body></html>

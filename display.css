@@ -1,0 +1,376 @@
+/* Migrated from other custom CSS plugin */
+.our-offerings{background:white; text-align:center; padding:20px 0 0; margin:0 auto 100px;}
+.our-offerings .content {padding: 80px 20px 68px 20px;}
+.offering-head{ text-align:left;}
+.offering-head h2{ margin:0 0 25px; padding:0; color:#17282b; line-height:100%; text-transform:uppercase; display:block;}
+.offering-head p{ color:#17282b; font-size:20px; line-height:30px; display:block; margin:0 0 60px; padding:0;}
+.offering-body{ margin:0 -15px; padding:0; }
+.offering-body ul{margin:0; padding:0; list-style:none; display:flex;}
+.offering-body ul li{ width:33.33%;}
+.content ul li.offering-healcare::after { content:"" !important; }
+.offering-body-div h3{ margin:0 0 25px; padding:0; color:#17282b;font-size:20px; line-height:100%; display:block;    text-transform: initial;
+font-weight: 700;}
+.offering-body-div p{ margin:0; padding:0; color:#42454a; font-size:16px; line-height:28px; display:block;}
+.offering-body-div h6{ color:#1b75bc; font-size:16px; line-height:20px; display:inline-block; vertical-align:top; text-transform:uppercase; margin:25px 0 0; background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/offering-arrow.png) no-repeat right -1px; padding:0 34px 0 0; font-weight:700;}
+
+.offering-body-div a{ width:329px; height: 442px; border-radius:6px; position: relative; z-index: 10; margin: 0 auto; display: block;transition: ease-in-out .5s; overflow:hidden;}
+.offering-body-div a:hover{text-decoration:none;}
+.offering-body-div a:hover span img{transform: scale(1.4);}
+.offering-body-div a span{ display:block;}
+.offering-body-div a span img{ border-radius:6px; transition:ease-in-out .5s;}
+.offering-body-caption{ position:absolute; top:0; left:0; width:calc(100% - 30px); height: calc(100% - 38px); display: block; padding: 38px 15px 0;}
+
+.fully-turnkey-head{ margin:0; text-align:center;}
+.fully-turnkey-head h2{ margin:0 0 25px; padding:0; color:#17282b; line-height:30px; font-weight:700; text-transform:uppercase; display:block;}
+.fully-turnkey-head p{ color:#42454a; font-weight:300; font-size:20px; line-height:30px; display:block; margin:0; padding:0;}
+.fully-turnkey-body{ height:auto; margin:-70px 0 0; display:flex; align-items:center;     justify-content: center;}
+.fully-turnkey-body h3{ margin:0; padding:0; color:#1078bd; font-size:20px; font-weight:700; line-height:27px;font-family:'Inter';font-weight: bold;}
+.fully-turnkey-body h4{ margin:0; padding:0;  font-size:108px; color:#d0dbe2; font-weight:300; font-family:'Inter';font-weight: 300;}
+.fully-turnkey-body-l{ width:450px; margin:0;}
+.fully-turnkey-body-l .d-flex{align-items:center;display:flex;}
+.fully-turnkey-body-m{ width:240px; margin:0 10px;}
+.fully-turnkey-body-m span{ width: 233px; height: 233px; display: flex; border-radius: 100%; border: 1px solid #bdcdd6; align-items: center; justify-content: center; position:relative;}
+.fully-turnkey-body-r{ width:auto; margin:0 0 0 -10px; padding:140px 0 0 130px;}
+.fully-turnkey-body-l h3{margin:0 10px 0 0; padding:0; color:#1078bd; font-size: 20px; position: relative; font-weight: 700; line-height: 27px; font-family: 'Inter';font-weight: bold; text-align: right; width: 260px;}
+.fully-turnkey-body-l p{ margin:0; padding:0;}
+.fully-turnkey-body h3:before {background: rgba(208,219,226,.35); width: 145px; height: 145px; content: ''; position: absolute; border-radius: 80px; top: 50%; right: -15px; transform: translateY(-50%); z-index: -1; }
+.fully-turnkey-body-r h3{ margin:0 0 20px; position:relative;}
+.fully-turnkey-body-r h3:before {background:rgba(208,219,226,.35); width:145px; height:145px; content:''; position:absolute; border-radius:80px; top:-45px; left:-45px; z-index:-1; transform:initial;}
+.services-div {padding:0 0 0 70px;position: relative;}
+.fully-turnkey-body-r span{margin:0; padding: 0; font-size: 108px; color: #d0dbe2; position: absolute; font-weight: 300; font-family: 'Inter';font-weight: 300; left:0; top:0; line-height: 100%;}
+
+.services-div + .services-div{ margin-top:85px;}
+.services-div ul{ margin:0; padding:0; list-style:none;}
+.services-div ul li{ margin:0 0 10px; padding:0 0 0 44px; color:#42454a; font-size:16px; font-weight:700; display:block; line-height:30px;}
+.icon-11{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-11.png) no-repeat 0 0;}
+.icon-12{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-12.png) no-repeat 0 0;}
+.icon-13{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-13.png) no-repeat 0 0;}
+.icon-14{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-14.png) no-repeat 0 0;}
+.icon-15{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-15.png) no-repeat 0 0;}
+.icon-16{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-16.png) no-repeat 0 0;}
+.icon-17{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-17.png) no-repeat 0 0;}
+.icon-18{background:url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-18.png) no-repeat 0 0;}
+
+.services-div:first-child:before {content: ''; background: url(https://vrvisiongroup.com/wp-content/uploads/2018/10/pattern-2.png) no-repeat 0 0; width: 130px; height: 150px; position: absolute; top: 48px; right: 101%;}
+.services-div + .services-div:before {content: ''; background: url(https://vrvisiongroup.com/wp-content/uploads/2018/10/pattern-3.png) no-repeat 0 0; width: 130px; height: 150px; position: absolute; top:-48px; right: 101%;}
+
+
+
+.circle-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -75px;
+    z-index: -1;
+}
+ .circle{border-radius: 50%; background-color: #1078bd; width: 150px; height: 150px; position: absolute; opacity: 0; animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32); }
+@keyframes scaleIn {
+  from {
+    transform: scale(.5, .5);
+    opacity: .5;
+  }
+  to {
+    transform: scale(2.5, 2.5);
+    opacity: 0;
+  }
+}
+
+
+.hero-ctas a.cta.open{padding:1em .02em !important; width:190px !important; transition:initial !important;}
+.hero-ctas a.cta.link{padding:1em .02em !important; width:190px !important; transition:initial !important;}
+.hero-ctas a i{display:inline-block; vertical-align:top; transition: ease-in-out .5s;}
+.hero-ctas a span {display:inline-block; vertical-align:top; padding:4px 0 0 0; line-height:15px;  position:relative; transition: ease-in-out .5s;}
+.hero-ctas i{ opacity:0; transition:ease-in-out .5s; width:0;}
+.hero-ctas a:hover span{ left:-2px; position:relative;}
+.hero-ctas a:hover i{ opacity:1; transition:ease-in-out .5s; width:auto; margin:0 0 0 4px;}
+.hero-ctas .cta.open:hover:after{ display:none;}
+.hero-ctas .cta.link:hover:after{ display:none;}
+.fully-turnkey-body-l ul{ display:none;}
+
+@media(max-width: 1330px) {
+  header.sticky ul.menu li.cta {
+    display: none !important;
+  }
+}
+@media(max-width: 1200px) {
+  header.sticky .menu_trigger .slicknav_icon span {
+    background: #1978ba;
+  }
+  header.sticky {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header.sticky:before, header.sticky:after {
+    content: none !important;
+  }
+}
+
+@media(min-width:1025px) and (max-width:1199px){
+	.fully-turnkey-body-r h3,
+	.fully-turnkey-body-l h3 {font-size:18px;line-height: 24px;}
+	.fully-turnkey-body-m {width: 200px; margin: 0 10px;}
+	.fully-turnkey-body-m span {width: 180px;height: 180px;}	
+	.fully-turnkey-body h4 {font-size: 90px;}
+	.services-div ul li {font-size: 15px;}
+	
+}
+
+@media(min-width:1025px) and (max-width:1099px){
+	.offering-body-div a{ width:300px; height: 400px;}
+}
+
+@media(min-width:992px) and (max-width:1024px){
+	.our-offerings {margin: 0 auto 50px;}
+	.offering-head{ margin:0 0 30px;}
+	.offering-head p{ margin:0;}
+	.offering-head h2 {margin:0 0 15px; font-size:28px;}
+	.offering-head p{font-size: 16px; line-height: 24px;}
+	.offering-body-div a {width: 310px; height: 414px;}
+	.offering-body-div p br{ display:none;}
+	.offering-body-caption {height: calc(100% - 28px); padding: 28px 15px 0;}
+	.offering-body-div h3 {margin: 0 0 10px;}
+	.offering-body-div p {line-height: 24px;}
+	.offering-body-div h6{ margin-top:10px;}
+	.offering-body-div h6 {font-size:13px;line-height:20px;margin-top:10px; background-size:auto 15px; background-position:100% 1px; padding:0 25px 0 0;}
+	.fully-turnkey-body-m {width: 160px; margin:0 5px;}
+	.fully-turnkey-body-m span {width: 160px; height: 160px;}
+	.fully-turnkey-body-l h3 {margin: 0 10px 0 0; font-size: 18px; line-height: 24px;}
+	.fully-turnkey-body h4 {font-size: 80px;}
+	.fully-turnkey-body-r {padding: 140px 0 0 100px;}
+	.services-div:first-child:before{background-size: 100px auto;    top: 68px;right: 95%;}
+	.services-div + .services-div:before{ top:-24px; right: 85%; background-size: 90px auto;}
+	.services-div + .services-div {margin-top: 60px;}
+	
+}
+
+@media(min-width:768px) and (max-width:991px){
+.offering-body-caption {width: calc(100% - 10px); height: calc(100% - 20px); padding: 20px 5px 0;}
+.offering-body-div a {width: 240px;height: 320px;}
+.offering-body-div h3 {margin: 0 0 10px; font-size:18px;}
+.offering-body-div p {font-size: 14px;line-height: 20px;}
+.offering-body-div p br{ display:none;}
+.offering-body-div h6 {font-size:13px;line-height:20px;margin-top:10px; background-size:auto 15px; background-position:100% 1px; padding:0 25px 0 0;}
+.our-offerings .content {padding:20px;}
+.our-offerings {margin: 0 auto 50px;}
+.offering-head{ margin:0 0 30px;}
+.offering-head p{ margin:0;}
+.offering-head h2 {margin:0 0 10px; font-size:28px;}
+.offering-head p {font-size: 16px; line-height: 24px;}
+.fully-turnkey-body-m {width: 120px;margin: 0 5px;}
+.fully-turnkey-body-m span {width: 120px;height: 120px;}
+.fully-turnkey-body-m span img{max-width:90px;}
+.fully-turnkey-body-l h3 {margin: 0 5px 0 0; font-size: 16px; line-height: 22px; width: auto;}
+.fully-turnkey-body h3:before {width: 100px; height: 100px; right: -10px;}
+.fully-turnkey-body-r h3:before {width: 100px; height: 100px; top: -30px; left: -30px;}
+.fully-turnkey-body h3 {font-size: 16px; line-height: 20px;}
+.fully-turnkey-body-r span {margin:0;font-size:80px;}
+.services-div ul {margin: 0 0 0 -40px;}
+.services-div ul li {font-size: 15px;}
+.fully-turnkey-body-r {padding: 140px 0 0 40px;}
+.services-div:first-child:before {    width: 90px; height: 70px; top: 88px; right:90%; background-size: 70px auto;}
+.services-div + .services-div {margin-top:60px;}
+.services-div + .services-div:before { width:90px; height: 90px; top: -32px; right: 86%; background-size: 60px auto;}
+.services-div {padding: 0 0 0 60px;}
+
+}
+
+@media(max-width:767px){
+	.offering-body ul {flex-wrap: wrap;}
+	.offering-body ul li{width:100%; max-width:330px; margin: 0 auto;}
+	.our-offerings{ background-size:cover;}
+	.our-offerings .content {padding:20px;}
+	.offering-head p {font-size: 15px; line-height: 24px; margin: 0 0 30px;}
+	.offering-body-div a {width: 300px; height: 400px;}
+	.offering-body-caption {width: calc(100% - 30px); height: calc(100% - 20px); padding: 20px 15px 0;}
+	.offering-body-div h3 {margin: 0 0 10px;}
+	.offering-body-div p {font-size: 14px; line-height: 22px;}
+	.offering-body-div h6 {font-size: 14px; line-height: 20px; margin: 10px 0 0; background-position:right 0; padding: 0 24px 0 0; background-size:auto 14px;}
+	.fully-turnkey-head h2{ font-size:30px;}
+	.fully-turnkey-head p {font-size: 16px; line-height: 24px;}
+	.fully-turnkey-head {margin:20px 15px 50px 15px;text-align: center;}
+	.fully-turnkey-body {flex-wrap: wrap; padding: 0 15px; width: 100%; max-width: 310px; margin: 0 auto;}
+	.fully-turnkey-body-l {width: 100%; margin: 0;}
+	.fully-turnkey-body h3:before {width: 100px; height: 100px; left:10px; }
+	.fully-turnkey-body-l .d-flex {flex-wrap: wrap;justify-content: center; padding: 0 0 0 68px;}
+	.fully-turnkey-body-l p {width: 100%; padding: 0 20px; max-width: 140px; margin:20px auto 0;}
+	.fully-turnkey-body-l h4{ width:40px;text-align: right;}
+	.fully-turnkey-body-l h3{ width: 240px; text-align: left; margin: 0;}
+	.fully-turnkey-body-m {display: block; width: 100%;}
+	.fully-turnkey-body-m span {width: 200px; height: 200px; margin: 0 auto;}
+	.fully-turnkey-body-r { padding:0; display:block; width:100%;}
+	.services-div + .services-div:before,
+	.services-div:first-child:before{ display:none;}
+	.services-div + .services-div {margin-top:0;}
+	.services-div{ margin:35px 0 20px !important;}
+	.fully-turnkey-body-l{ position:relative;}
+	.fully-turnkey-body-l ul { display:block;margin: 10px 0 0 -57px; padding: 0;}
+	.fully-turnkey-body-l ul li{ margin:0 0 10px; padding:0 0 0 44px; color:#42454a; font-size:15px;font-weight:700;display: block;line-height:30px;}
+	
+	.icon-51 {background: url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-51.jpg) no-repeat 0 0;}
+	.icon-52 {background: url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-52.jpg) no-repeat 0 0;}
+	.icon-53 {background: url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-53.jpg) no-repeat 0 0;}
+	.icon-54 {background: url(https://vrvisiongroup.com/wp-content/uploads/2018/10/icon-54.jpg) no-repeat 0 0;}
+							  
+    .fully-turnkey-body-l span{ display:none;}		
+	.fully-turnkey-body h4{position:absolute; top:0; left:0;}
+	.fully-turnkey-body .fully-turnkey-body-l h3:before{ left:6px; top: 10px;}
+}
+.articles-wrapper {
+    justify-content: space-between !important;
+}
+.articles-wrapper:before {
+    display: none;
+}
+.articles-wrapper .article ul li{
+    margin: 0;
+}
+.article {
+    padding: 0 10px;
+}
+
+.article:nth-of-type(3n+0) {
+    padding: 0 10px;
+}
+.article .a-image, .a-slide .a-image {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.blog-slider .a-image {
+    background-position: top center;
+}
+
+
+.bubble {
+    position: absolute !important;
+    top: 40px;
+    right: 79px;
+    background-color: #E7ECF2;
+    border: solid .1rem #E7ECF2;
+    border-radius: .25rem;
+    padding: 0.3em 0.8em;
+    margin-top: 1.5em;
+    font-weight: 400;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05), 
+              0 2px 2px rgba(0,0,0,0.05), 
+              0 4px 4px rgba(0,0,0,0.05), 
+              0 8px 8px rgba(0,0,0,0.05),
+              0 16px 16px rgba(0,0,0,0.05);
+}
+
+.bubble a {
+    color: #657795 !important;
+    text-transform: capitalize !important;
+}
+
+.bubble a:hover:after {
+    content: none !important;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 0.5em solid transparent;
+    border-bottom-color: #E7ECF2;
+    border-top: 0;
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+}
+
+
+@media (max-width: 1200px) {
+    .bubble {
+        top: 280px;
+        z-index: 99999;
+        padding: 0.3em 0.5em !important;
+    }
+    .bubble a {
+        padding: 0 !important;
+        background: transparent !important;
+    }
+}
+
+.sticky .bubble {
+  display: none !important;
+}
+
+
+
+/* POPUP STYLES */
+#popmake-8864 {
+	 max-width: 600px !important;
+}
+ #popmake-8864 .pum-content {
+	 display: flex;
+	 align-items: center;
+	 justify-items: center;
+	 font-family: 'Inter';
+   font-weight: bold;
+}
+ #popmake-8864 .pum-content h5 {
+	 font-size: 13px;
+	 letter-spacing: 0.5px;
+	 margin-bottom: 10px;
+	 color: #999;
+	 font-family: 'Inter', Arial, Gotham, 'Helvetica Neue', Helvetica, sans-serif;
+   font-weight: 500;
+}
+ #popmake-8864 .pum-content h3 {
+	 margin-bottom: 30px;
+	 font-size: 25px;
+	 line-height: 130%;
+	 font-weight: 600;
+}
+ #popmake-8864 .pum-content h4, #popmake-8864 .pum-content h3, #popmake-8864 .pum-content p {
+	 padding: 0;
+}
+ #popmake-8864 .pum-content a {
+	 background: #2276b9;
+	 border-radius: 3px;
+	 padding: 13px 10px 10px;
+	 color: white;
+}
+ #popmake-8864 .pum-content a:hover {
+	 text-decoration: none;
+}
+ #popmake-8864 .pum-content img {
+	 width: 100%;
+	 max-width: 300px;
+}
+ @media (max-width: 500px) {
+	 #popmake-8864 .pum-content {
+		 display: flex;
+		 flex-direction: column-reverse;
+		 text-align: center;
+	}
+	 #popmake-8864 .pum-content h5 {
+		 font-size: 10px;
+	}
+	 #popmake-8864 .pum-content h3 {
+		 font-size: 20px;
+		 margin-bottom: 10px;
+	}
+	 #popmake-8864 .pum-content a {
+		 font-size: 13px;
+		 letter-spacing: 0.3px;
+		 display: block;
+	}
+	 #popmake-8864 .pum-content img {
+		 width: 50%;
+		 text-align: center;
+		 margin-bottom: 20px;
+	}
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer .content .col-md-4 {
+  height: auto !important;
+}
